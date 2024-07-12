@@ -6,10 +6,75 @@
 //
 
 import SwiftUI
+import Charts
+
+let trainings = [
+    "Bench Press",
+    "Bicep Curl"
+]
 
 struct HistoryView: View {
+    @State var selectedTraining = trainings[0]
+    @StateObject var viewModel = HistoryViewModel()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        let curGradient = LinearGradient(
+            gradient: Gradient (
+                colors: [
+                    Color.orange.opacity(0.5),
+                    Color.orange.opacity(0.2),
+                    Color.orange.opacity(0.05),
+                ]
+            ),
+            startPoint: .top,
+            endPoint: .bottom
+        
+        )
+        VStack(alignment: .leading){
+            HStack(){
+                Picker("training", selection: $selectedTraining) {
+                    ForEach(trainings, id: \.self){ training in
+                        Text(training)
+                            .tag(training)
+                    }
+                }
+                .tint(.orange)
+                Spacer()
+            }
+//            Spacer()
+            
+            Chart {
+                ForEach(viewModel.histories){ history in
+                    AreaMark(
+                        x: .value("Date", history.date),
+                        y: .value("1RM", history.rm)
+                    )
+                    .interpolationMethod(.catmullRom)
+                    .foregroundStyle(curGradient)
+                    LineMark(
+                        x: .value("Date", history.date),
+                        y: .value("1RM", history.rm)
+                    )
+                    .foregroundStyle(Color.orange)
+                    .interpolationMethod(.catmullRom)
+                    .lineStyle(.init(lineWidth: 2))
+                    .symbol {
+                        Circle()
+                            .fill(Color.white)
+                            .frame(width: 18)
+                            .overlay(
+                                Circle()
+                                    .fill(Color.orange)
+                                    .frame(width: 12)
+                            )
+                    }
+                    
+                }
+            }
+            .frame(height: 360)
+            
+            Spacer()
+        }
     }
 }
 
