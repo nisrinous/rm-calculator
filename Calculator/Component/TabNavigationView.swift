@@ -12,21 +12,21 @@ struct TabNavigationView: View {
         TabView {
             FirstTabView()
                 .tabItem {
-                    Label("Calculator", systemImage: "minus.forwardslash.plus")
+                    Label("Calculator", systemImage: "equal")
                 }
             
             SecondTabView()
                 .tabItem {
-                    Label("Table", systemImage: "tablecells")
+                    Label("Table", systemImage: "dumbbell")
                 }
             
             HistoryTabView()
                 .tabItem {
-                    Label("History", systemImage: "book")
+                    Label("History", systemImage: "star")
                 }
             PlannerTabView()
                 .tabItem {
-                    Label("Planner", systemImage: "book.closed")
+                    Label("Planner", systemImage: "list.bullet.clipboard")
                 }
         }
     }
