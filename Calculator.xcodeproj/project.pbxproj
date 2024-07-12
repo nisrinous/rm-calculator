@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E7BC9772C41490D00FF1A6A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2E7BC9762C41490D00FF1A6A /* Localizable.strings */; };
 		E09F7EB02C3CE49B008707BD /* CalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09F7EAF2C3CE49B008707BD /* CalculatorApp.swift */; };
 		E09F7EB22C3CE49B008707BD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09F7EB12C3CE49B008707BD /* ContentView.swift */; };
 		E09F7EB42C3CE49B008707BD /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09F7EB32C3CE49B008707BD /* Item.swift */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E7BC9752C41490D00FF1A6A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2E7BC9782C41495000FF1A6A /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E09F7EAC2C3CE49B008707BD /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E09F7EAF2C3CE49B008707BD /* CalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorApp.swift; sourceTree = "<group>"; };
 		E09F7EB12C3CE49B008707BD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,6 +75,7 @@
 				E09F7EC12C3D0421008707BD /* ViewModel */,
 				E09F7EB52C3CE49D008707BD /* Assets.xcassets */,
 				E09F7EB72C3CE49D008707BD /* Preview Content */,
+				2E7BC9762C41490D00FF1A6A /* Localizable.strings */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -157,6 +161,7 @@
 			knownRegions = (
 				en,
 				Base,
+				id,
 			);
 			mainGroup = E09F7EA32C3CE49B008707BD;
 			productRefGroup = E09F7EAD2C3CE49B008707BD /* Products */;
@@ -174,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E09F7EB92C3CE49D008707BD /* Preview Assets.xcassets in Resources */,
+				2E7BC9772C41490D00FF1A6A /* Localizable.strings in Resources */,
 				E09F7EB62C3CE49D008707BD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -200,12 +206,25 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		2E7BC9762C41490D00FF1A6A /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E7BC9752C41490D00FF1A6A /* en */,
+				2E7BC9782C41495000FF1A6A /* id */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		E09F7EBA2C3CE49D008707BD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -269,6 +288,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -328,7 +348,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Calculator/Preview Content\"";
-				DEVELOPMENT_TEAM = 8FPJ93WVDR;
+				DEVELOPMENT_TEAM = C59QF2W8P6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -357,7 +377,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Calculator/Preview Content\"";
-				DEVELOPMENT_TEAM = 8FPJ93WVDR;
+				DEVELOPMENT_TEAM = C59QF2W8P6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
