@@ -30,6 +30,7 @@ struct HistoryView: View {
             endPoint: .bottom
         
         )
+        
         VStack(alignment: .leading){
             HStack(){
                 Picker("training", selection: $selectedTraining) {
@@ -72,9 +73,21 @@ struct HistoryView: View {
                 }
             }
             .frame(height: 360)
+            .padding(.bottom)
+            
+            Text("1RM History")
+                .font(.title2)
+            Divider()
+            
+            ScrollView{
+                ForEach(viewModel.histories) { history in
+                    HistoryCard()
+                }
+            }
             
             Spacer()
         }
+        .padding(.all)
     }
 }
 
