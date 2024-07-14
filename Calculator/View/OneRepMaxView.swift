@@ -9,6 +9,7 @@ import SwiftUI
 
 struct OneRepMaxView: View {
     @StateObject private var viewModel = OneRepMaxViewModel()
+    @Environment(\.modelContext) var modelContext
 
     var body: some View {
         NavigationView {
@@ -36,15 +37,15 @@ struct OneRepMaxView: View {
                     }
                 }
                 .navigationTitle("1RM Calculator")
-//                .toolbar {
-//                    ToolbarItem(placement: .navigationBarTrailing) {
-//                        Button(action: {
-//                            viewModel.saveCalculation()
-//                        }, label: {
-//                            Text("Save")
-//                        })
-//                    }
-//                }
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button(action: {
+                            viewModel.saveCalculation(modelContext: modelContext)
+                        }, label: {
+                            Text("Save")
+                        })
+                    }
+                }
             }
         }
     }

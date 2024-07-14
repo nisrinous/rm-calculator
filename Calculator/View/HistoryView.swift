@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 import Charts
 
 let trainings = [
@@ -15,7 +16,7 @@ let trainings = [
 
 struct HistoryView: View {
     @State var selectedTraining = trainings[0]
-    @StateObject var viewModel = HistoryViewModel()
+    @Query var histories: [History]
     
     var body: some View {
         let curGradient = LinearGradient(
@@ -45,16 +46,16 @@ struct HistoryView: View {
 //            Spacer()
             
             Chart {
-                ForEach(viewModel.histories){ history in
+                ForEach(histories){ history in
                     AreaMark(
                         x: .value("Date", history.date),
-                        y: .value("1RM", history.rm)
+                        y: .value("1RM", history.oneRepMax)
                     )
                     .interpolationMethod(.catmullRom)
                     .foregroundStyle(curGradient)
                     LineMark(
                         x: .value("Date", history.date),
-                        y: .value("1RM", history.rm)
+                        y: .value("1RM", history.oneRepMax)
                     )
                     .foregroundStyle(.primaryOrange)
                     .interpolationMethod(.catmullRom)
@@ -80,8 +81,8 @@ struct HistoryView: View {
             Divider()
             
             ScrollView{
-                ForEach(viewModel.histories) { history in
-                    HistoryCard()
+                ForEach(histories) { history in
+                    HistoryCard(history: history)
                 }
             }
             
