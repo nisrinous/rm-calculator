@@ -17,7 +17,7 @@ struct CalculatorButton: View {
                 .font(.largeTitle)
                 .frame(width: 80, height: 80)
                 .foregroundColor(.white)
-                .background(Color.gray)
+                .background(.secondaryGrey)
                 .cornerRadius(40)
                 .padding(5)
         }
