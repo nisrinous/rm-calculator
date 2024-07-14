@@ -21,9 +21,9 @@ struct HistoryView: View {
         let curGradient = LinearGradient(
             gradient: Gradient (
                 colors: [
-                    Color.orange.opacity(0.5),
-                    Color.orange.opacity(0.2),
-                    Color.orange.opacity(0.05),
+                    Color(.primaryOrange).opacity(0.5),
+                    Color(.primaryOrange).opacity(0.2),
+                    Color(.primaryOrange).opacity(0.05),
                 ]
             ),
             startPoint: .top,
@@ -39,7 +39,7 @@ struct HistoryView: View {
                             .tag(training)
                     }
                 }
-                .tint(.orange)
+                .tint(.primaryOrange)
                 Spacer()
             }
 //            Spacer()
@@ -56,7 +56,7 @@ struct HistoryView: View {
                         x: .value("Date", history.date),
                         y: .value("1RM", history.rm)
                     )
-                    .foregroundStyle(Color.orange)
+                    .foregroundStyle(.primaryOrange)
                     .interpolationMethod(.catmullRom)
                     .lineStyle(.init(lineWidth: 2))
                     .symbol {
@@ -65,7 +65,7 @@ struct HistoryView: View {
                             .frame(width: 18)
                             .overlay(
                                 Circle()
-                                    .fill(Color.orange)
+                                    .fill(.primaryOrange)
                                     .frame(width: 12)
                             )
                     }

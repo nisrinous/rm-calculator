@@ -30,7 +30,7 @@ struct HistoryCard: View {
             .padding([.bottom, .horizontal])
         }
         .background(
-            Color.gray
+            .secondaryGrey
         )
         .clipShape(
             RoundedRectangle(cornerSize: CGSize(width: 25, height: 25))
@@ -46,7 +46,7 @@ func informationMaker(title: String, data: String, matrix: String) -> some View 
             .bold()
         HStack(alignment: .bottom){
             Text(data)
-                .foregroundStyle(Color.orange)
+                .foregroundStyle(.primaryOrange)
                 .font(.system(size: 30))
                 .frame(height: 25)
             Text(matrix)

@@ -29,6 +29,7 @@ struct TabNavigationView: View {
                     Label("Planner", systemImage: "list.bullet.clipboard")
                 }
         }
+        .accentColor(.primaryOrange)
     }
 }
 
