@@ -13,6 +13,7 @@ class OneRepMaxViewModel: ObservableObject {
     @Published var weight: String = ""
     @Published var repetitions: String = ""
     @Published var oneRepMax: Double?
+    @Published var percentage: Double?
     @Environment(\.modelContext) private var modelContext
 
     func calculateOneRepMax() {
@@ -20,6 +21,15 @@ class OneRepMaxViewModel: ObservableObject {
             return
         }
         oneRepMax = weight * (1 + (repetitions / 30))
+        calculatePercentages()
+    }
+    
+    func calculatePercentages() {
+        guard let weight = Double(weight), let oneRepMax = oneRepMax else {
+            percentage = 0
+            return
+        }
+        percentage = (weight / oneRepMax) * 100
     }
 
     func saveCalculation() {

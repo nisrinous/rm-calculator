@@ -15,15 +15,24 @@ final class Item: Identifiable {
     var weight: Double?
     var repetitions: Double?
     var oneRepMax: Double?
+    var percentage: Double?
     var percentages: [Double]?
     var trainingWeights: [Double]?
     
-    init(timestamp: Date, calculationType: String, weight: Double? = nil, repetitions: Double? = nil, oneRepMax: Double? = nil, percentages: [Double]? = nil, trainingWeights: [Double]? = nil) {
+    init(timestamp: Date, 
+         calculationType: String,
+         weight: Double? = nil,
+         repetitions: Double? = nil, 
+         oneRepMax: Double? = nil,
+         percentage: Double? = 0,
+         percentages: [Double]? = nil,
+         trainingWeights: [Double]? = nil) {
         self.timestamp = timestamp
         self.calculationType = calculationType
         self.weight = weight
         self.repetitions = repetitions
         self.oneRepMax = oneRepMax
+        self.percentage = percentage
         self.percentages = percentages
         self.trainingWeights = trainingWeights
     }

@@ -29,6 +29,9 @@ struct OneRepMaxView: View {
                     if let oneRepMax = viewModel.oneRepMax {
                         Section(header: Text("Result")) {
                             Text("Estimated 1RM: \(oneRepMax, specifier: "%.2f") kg")
+                            if let percentage = viewModel.percentage {
+                                Text("Estimated percentage: \(percentage, specifier: "%.2f") %")
+                            }
                         }
                     }
                 }

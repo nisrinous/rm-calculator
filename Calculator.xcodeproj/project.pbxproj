@@ -70,6 +70,7 @@
 		E09F7EAE2C3CE49B008707BD /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				E09F7F1C2C43C088008707BD /* Model */,
 				E09F7ECF2C3D96D4008707BD /* Component */,
 				E09F7EC42C3D0465008707BD /* View */,
 				E09F7EC12C3D0421008707BD /* ViewModel */,
@@ -102,7 +103,6 @@
 			isa = PBXGroup;
 			children = (
 				E09F7EAF2C3CE49B008707BD /* CalculatorApp.swift */,
-				E09F7EB32C3CE49B008707BD /* Item.swift */,
 				E09F7EB12C3CE49B008707BD /* ContentView.swift */,
 				E09F7EBF2C3D035F008707BD /* OneRepMaxView.swift */,
 				E09F7EC52C3D70A8008707BD /* TrainingWeightView.swift */,
@@ -117,6 +117,14 @@
 				E09F7ECD2C3D9629008707BD /* CalculatorButtons.swift */,
 			);
 			path = Component;
+			sourceTree = "<group>";
+		};
+		E09F7F1C2C43C088008707BD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E09F7EB32C3CE49B008707BD /* Item.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
