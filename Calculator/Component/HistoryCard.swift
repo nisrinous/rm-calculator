@@ -35,7 +35,7 @@ struct HistoryCard: View {
         .clipShape(
             RoundedRectangle(cornerSize: CGSize(width: 25, height: 25))
         )
-        .padding(.horizontal)
+//        .padding(.horizontal)
     }
 }
 
