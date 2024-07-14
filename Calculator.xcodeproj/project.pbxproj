@@ -20,6 +20,7 @@
 		E09F7ECA2C3D95A3008707BD /* CalculatorButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09F7EC92C3D95A3008707BD /* CalculatorButtonViewModel.swift */; };
 		E09F7ECC2C3D95F6008707BD /* CalculatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09F7ECB2C3D95F6008707BD /* CalculatorButton.swift */; };
 		E09F7ECE2C3D9629008707BD /* CalculatorButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09F7ECD2C3D9629008707BD /* CalculatorButtons.swift */; };
+		E09F7F1E2C43C957008707BD /* TabNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09F7F1D2C43C957008707BD /* TabNavigationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		E09F7EC92C3D95A3008707BD /* CalculatorButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButtonViewModel.swift; sourceTree = "<group>"; };
 		E09F7ECB2C3D95F6008707BD /* CalculatorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButton.swift; sourceTree = "<group>"; };
 		E09F7ECD2C3D9629008707BD /* CalculatorButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButtons.swift; sourceTree = "<group>"; };
+		E09F7F1D2C43C957008707BD /* TabNavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabNavigationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 			children = (
 				E09F7ECB2C3D95F6008707BD /* CalculatorButton.swift */,
 				E09F7ECD2C3D9629008707BD /* CalculatorButtons.swift */,
+				E09F7F1D2C43C957008707BD /* TabNavigationView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				E09F7EC32C3D043A008707BD /* OneRepMaxViewModel.swift in Sources */,
 				E09F7EB42C3CE49B008707BD /* Item.swift in Sources */,
 				E09F7ECA2C3D95A3008707BD /* CalculatorButtonViewModel.swift in Sources */,
+				E09F7F1E2C43C957008707BD /* TabNavigationView.swift in Sources */,
 				E09F7EC82C3D70D0008707BD /* TrainingWeightViewModel.swift in Sources */,
 				E09F7EC62C3D70A8008707BD /* TrainingWeightView.swift in Sources */,
 				E09F7EB02C3CE49B008707BD /* CalculatorApp.swift in Sources */,
