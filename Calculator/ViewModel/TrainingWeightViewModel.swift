@@ -27,7 +27,7 @@ class TrainingWeightViewModel: ObservableObject {
             return
         }
 
-        let newItem = Item(timestamp: Date(), calculationType: "TrainingWeight", oneRepMax: oneRepMax, percentages: percentages, trainingWeights: trainingWeights)
-        modelContext.insert(newItem)
+//        let newItem = Item(timestamp: Date(), calculationType: "TrainingWeight", oneRepMax: oneRepMax, percentages: percentages, trainingWeights: trainingWeights)
+//        modelContext.insert(newItem)
     }
 }

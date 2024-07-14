@@ -6,26 +6,29 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct HistoryCard: View {
+    var history: History
+    
     var body: some View {
         VStack{
             HStack{
                 Spacer()
-                Text("Ini Tanggal")
+                Text(formatDate(date: history.date))
                     .font(.system(size: 10))
             }
             .padding([.trailing, .top])
             HStack{
-                informationMaker(title: "Weight", data: "50", matrix: "kg")
+                informationMaker(title: "Weight", data: String(history.weight), matrix: "kg")
                 Spacer()
                 dividerMaker()
                 Spacer()
-                informationMaker(title: "Repetition", data: "5", matrix: "reps")
+                informationMaker(title: "Repetition", data: String(history.repetitions), matrix: "reps")
                 Spacer()
                 dividerMaker()
                 Spacer()
-                informationMaker(title: "1RM", data: "70", matrix: "kg")
+                informationMaker(title: "1RM", data: String(format: "%.1f", history.oneRepMax), matrix: "kg")
             }
             .padding([.bottom, .horizontal])
         }
@@ -35,7 +38,7 @@ struct HistoryCard: View {
         .clipShape(
             RoundedRectangle(cornerSize: CGSize(width: 25, height: 25))
         )
-        .padding(.horizontal)
+//        .padding(.horizontal)
     }
 }
 
@@ -61,6 +64,14 @@ func dividerMaker() -> some View {
         .overlay(Color.white)
 }
 
+func formatDate(date: Date) -> String{
+    let dateFormatter = DateFormatter()
+    
+    dateFormatter.dateStyle = .short
+    
+    return dateFormatter.string(from: date)
+}
+
 #Preview {
-    HistoryCard()
+    HistoryCard(history: History(date: Date.now, weight: 20, repetitions: 10, oneRepMax: 50))
 }
