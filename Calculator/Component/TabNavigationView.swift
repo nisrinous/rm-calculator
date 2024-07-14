@@ -46,7 +46,7 @@ struct SecondTabView: View {
 
 struct HistoryTabView: View {
     var body: some View {
-        Text("History view")
+        HistoryView()
     }
 }
 
