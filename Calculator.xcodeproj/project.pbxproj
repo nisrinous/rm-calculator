@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		2E7BC9772C41490D00FF1A6A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2E7BC9762C41490D00FF1A6A /* Localizable.strings */; };
+		4DAA72DF2C44244B0003223C /* WarmUpSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA72DE2C44244B0003223C /* WarmUpSheetViewModel.swift */; };
+		4DAA72E12C4427DE0003223C /* ChartOneRM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA72E02C4427DE0003223C /* ChartOneRM.swift */; };
+		4DAA72E32C4428380003223C /* WarmUpSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA72E22C4428380003223C /* WarmUpSheet.swift */; };
+		4DAA72E52C4428500003223C /* WarmUpCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA72E42C4428500003223C /* WarmUpCard.swift */; };
+		4DAA72E72C4431620003223C /* CustomNumberPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA72E62C4431620003223C /* CustomNumberPad.swift */; };
 		E09F7EB02C3CE49B008707BD /* CalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09F7EAF2C3CE49B008707BD /* CalculatorApp.swift */; };
 		E09F7EB22C3CE49B008707BD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09F7EB12C3CE49B008707BD /* ContentView.swift */; };
 		E09F7EB42C3CE49B008707BD /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09F7EB32C3CE49B008707BD /* Item.swift */; };
@@ -30,6 +35,11 @@
 /* Begin PBXFileReference section */
 		2E7BC9752C41490D00FF1A6A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2E7BC9782C41495000FF1A6A /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4DAA72DE2C44244B0003223C /* WarmUpSheetViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WarmUpSheetViewModel.swift; path = "../../../Nano Challenge 3/rm-calculator/Calculator/ViewModel/WarmUpSheetViewModel.swift"; sourceTree = "<group>"; };
+		4DAA72E02C4427DE0003223C /* ChartOneRM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartOneRM.swift; sourceTree = "<group>"; };
+		4DAA72E22C4428380003223C /* WarmUpSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarmUpSheet.swift; sourceTree = "<group>"; };
+		4DAA72E42C4428500003223C /* WarmUpCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarmUpCard.swift; sourceTree = "<group>"; };
+		4DAA72E62C4431620003223C /* CustomNumberPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNumberPad.swift; sourceTree = "<group>"; };
 		E09F7EAC2C3CE49B008707BD /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E09F7EAF2C3CE49B008707BD /* CalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorApp.swift; sourceTree = "<group>"; };
 		E09F7EB12C3CE49B008707BD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -105,6 +115,7 @@
 				E09F7EC22C3D043A008707BD /* OneRepMaxViewModel.swift */,
 				E09F7F212C43CB3B008707BD /* HistoryViewModel.swift */,
 				E09F7EC72C3D70D0008707BD /* TrainingWeightViewModel.swift */,
+				4DAA72DE2C44244B0003223C /* WarmUpSheetViewModel.swift */,
 				E09F7EC92C3D95A3008707BD /* CalculatorButtonViewModel.swift */,
 			);
 			path = ViewModel;
@@ -129,6 +140,10 @@
 				E09F7ECD2C3D9629008707BD /* CalculatorButtons.swift */,
 				E09F7F272C43CBF2008707BD /* HistoryCard.swift */,
 				E09F7F1D2C43C957008707BD /* TabNavigationView.swift */,
+				4DAA72E02C4427DE0003223C /* ChartOneRM.swift */,
+				4DAA72E22C4428380003223C /* WarmUpSheet.swift */,
+				4DAA72E42C4428500003223C /* WarmUpCard.swift */,
+				4DAA72E62C4431620003223C /* CustomNumberPad.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -216,17 +231,22 @@
 			files = (
 				E09F7ECE2C3D9629008707BD /* CalculatorButtons.swift in Sources */,
 				E09F7EC02C3D035F008707BD /* OneRepMaxView.swift in Sources */,
+				4DAA72E12C4427DE0003223C /* ChartOneRM.swift in Sources */,
 				E09F7ECC2C3D95F6008707BD /* CalculatorButton.swift in Sources */,
 				E09F7EB22C3CE49B008707BD /* ContentView.swift in Sources */,
+				4DAA72E52C4428500003223C /* WarmUpCard.swift in Sources */,
+				4DAA72DF2C44244B0003223C /* WarmUpSheetViewModel.swift in Sources */,
 				E09F7EC32C3D043A008707BD /* OneRepMaxViewModel.swift in Sources */,
 				E09F7F282C43CBF2008707BD /* HistoryCard.swift in Sources */,
 				E09F7EB42C3CE49B008707BD /* Item.swift in Sources */,
+				4DAA72E32C4428380003223C /* WarmUpSheet.swift in Sources */,
 				E09F7F202C43CB31008707BD /* History.swift in Sources */,
 				E09F7F242C43CB46008707BD /* HistoryView.swift in Sources */,
 				E09F7ECA2C3D95A3008707BD /* CalculatorButtonViewModel.swift in Sources */,
 				E09F7F1E2C43C957008707BD /* TabNavigationView.swift in Sources */,
 				E09F7EC82C3D70D0008707BD /* TrainingWeightViewModel.swift in Sources */,
 				E09F7EC62C3D70A8008707BD /* TrainingWeightView.swift in Sources */,
+				4DAA72E72C4431620003223C /* CustomNumberPad.swift in Sources */,
 				E09F7F222C43CB3B008707BD /* HistoryViewModel.swift in Sources */,
 				E09F7EB02C3CE49B008707BD /* CalculatorApp.swift in Sources */,
 			);
@@ -384,6 +404,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -413,6 +434,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
