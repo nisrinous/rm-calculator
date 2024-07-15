@@ -12,6 +12,7 @@ import SwiftData
 class TrainingWeightViewModel: ObservableObject {
     @Published var oneRepMax: String = ""
     @Published var percentages: [Double] = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+    @Published var repetition: [Double] = [1, 2, 4, 6, 8, 10, 12, 16, 20, 24]
     @Published var trainingWeights: [Double] = []
     @Environment(\.modelContext) private var modelContext
 

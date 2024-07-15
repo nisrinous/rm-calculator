@@ -107,7 +107,7 @@ struct TrainingWeightResult: View {
                                     .resizable()
                                     .foregroundColor(.primaryOrange)
                                     .frame(width: 15, height: 15)
-                                Text("6 Rep")
+                                Text("\(viewModel.repetition[index], specifier: "%.0f") Rep")
                             }
                             Spacer()
                             HStack{
