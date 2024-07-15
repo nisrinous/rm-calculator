@@ -20,11 +20,14 @@ struct OneRepMaxView: View {
                     isShowingDetail = true
                 }) {
                     Text("Warm-Up")
+                        .font(.system(size: 17))
+                        .fontWeight(.bold)
                         .padding(.horizontal, 20)
                         .padding(.vertical, 14)
                         .background(viewModel.weight.isEmpty || viewModel.repetitions.isEmpty ? Color.gray : Color(red: 1, green: 0.58, blue: 0))
                         .foregroundColor(.white)
                         .cornerRadius(12)
+                        
                 }
                 .disabled(viewModel.weight.isEmpty || viewModel.repetitions.isEmpty)
                 .sheet(isPresented: $isShowingDetail) {

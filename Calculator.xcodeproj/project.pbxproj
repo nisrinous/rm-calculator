@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2E7BC9772C41490D00FF1A6A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2E7BC9762C41490D00FF1A6A /* Localizable.strings */; };
+		4D628D532C44E24A004A9635 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D628D522C44E24A004A9635 /* CustomTextField.swift */; };
 		4DAA72DF2C44244B0003223C /* WarmUpSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA72DE2C44244B0003223C /* WarmUpSheetViewModel.swift */; };
 		4DAA72E12C4427DE0003223C /* ChartOneRM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA72E02C4427DE0003223C /* ChartOneRM.swift */; };
 		4DAA72E32C4428380003223C /* WarmUpSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA72E22C4428380003223C /* WarmUpSheet.swift */; };
@@ -35,6 +36,7 @@
 /* Begin PBXFileReference section */
 		2E7BC9752C41490D00FF1A6A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2E7BC9782C41495000FF1A6A /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4D628D522C44E24A004A9635 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		4DAA72DE2C44244B0003223C /* WarmUpSheetViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WarmUpSheetViewModel.swift; path = "../../../Nano Challenge 3/rm-calculator/Calculator/ViewModel/WarmUpSheetViewModel.swift"; sourceTree = "<group>"; };
 		4DAA72E02C4427DE0003223C /* ChartOneRM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartOneRM.swift; sourceTree = "<group>"; };
 		4DAA72E22C4428380003223C /* WarmUpSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarmUpSheet.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				4DAA72E22C4428380003223C /* WarmUpSheet.swift */,
 				4DAA72E42C4428500003223C /* WarmUpCard.swift */,
 				4DAA72E62C4431620003223C /* CustomNumberPad.swift */,
+				4D628D522C44E24A004A9635 /* CustomTextField.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				E09F7F202C43CB31008707BD /* History.swift in Sources */,
 				E09F7F242C43CB46008707BD /* HistoryView.swift in Sources */,
 				E09F7ECA2C3D95A3008707BD /* CalculatorButtonViewModel.swift in Sources */,
+				4D628D532C44E24A004A9635 /* CustomTextField.swift in Sources */,
 				E09F7F1E2C43C957008707BD /* TabNavigationView.swift in Sources */,
 				E09F7EC82C3D70D0008707BD /* TrainingWeightViewModel.swift in Sources */,
 				E09F7EC62C3D70A8008707BD /* TrainingWeightView.swift in Sources */,

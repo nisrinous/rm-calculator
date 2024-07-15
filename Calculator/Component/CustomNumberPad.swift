@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CustomNumberPad: View {
     @Binding var activeTextField: Int?  // Untuk melacak text field mana yang aktif
-    @Binding var textFields: [String]  // Binding untuk menyimpan teks dari kedua field
+    @Binding var textFields: [String] // Binding untuk menyimpan teks dari kedua field
     
     let rows = [
         [1, 2, 3],
@@ -86,5 +86,6 @@ struct NumberButton: View {
         }
     }
 }
+
 
 
