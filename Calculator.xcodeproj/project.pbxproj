@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		115681572C41446E00DECFF2 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115681562C41446E00DECFF2 /* HistoryView.swift */; };
-		1156815B2C4190FA00DECFF2 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1156815A2C4190FA00DECFF2 /* History.swift */; };
+		1156816A2C45119100DECFF2 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115681692C45119100DECFF2 /* History.swift */; };
 		2E7BC9772C41490D00FF1A6A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2E7BC9762C41490D00FF1A6A /* Localizable.strings */; };
 		E09F7EB02C3CE49B008707BD /* CalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09F7EAF2C3CE49B008707BD /* CalculatorApp.swift */; };
 		E09F7EB22C3CE49B008707BD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09F7EB12C3CE49B008707BD /* ContentView.swift */; };
@@ -28,8 +28,8 @@
 
 /* Begin PBXFileReference section */
 		115681562C41446E00DECFF2 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
-		1156815A2C4190FA00DECFF2 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
-		115681652C44478900DECFF2 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Calculator.app; path = "/Users/renaldia/Documents/rm-calculator/build/Debug-iphoneos/Calculator.app"; sourceTree = "<absolute>"; };
+		115681682C450F0300DECFF2 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		115681692C45119100DECFF2 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		2E7BC9752C41490D00FF1A6A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2E7BC9782C41495000FF1A6A /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E09F7EAF2C3CE49B008707BD /* CalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorApp.swift; sourceTree = "<group>"; };
@@ -63,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				E09F7EAE2C3CE49B008707BD /* Calculator */,
+				115681682C450F0300DECFF2 /* Calculator.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,7 +125,7 @@
 		E09F7F1C2C43C088008707BD /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				1156815A2C4190FA00DECFF2 /* History.swift */,
+				115681692C45119100DECFF2 /* History.swift */,
 				E09F7EB32C3CE49B008707BD /* Item.swift */,
 			);
 			path = Model;
@@ -147,7 +148,7 @@
 			);
 			name = Calculator;
 			productName = Calculator;
-			productReference = 115681652C44478900DECFF2 /* Calculator.app */;
+			productReference = 115681682C450F0300DECFF2 /* Calculator.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -204,6 +205,7 @@
 			files = (
 				E09F7ECE2C3D9629008707BD /* CalculatorButtons.swift in Sources */,
 				E09F7EC02C3D035F008707BD /* OneRepMaxView.swift in Sources */,
+				1156816A2C45119100DECFF2 /* History.swift in Sources */,
 				E09F7ECC2C3D95F6008707BD /* CalculatorButton.swift in Sources */,
 				E09F7EB22C3CE49B008707BD /* ContentView.swift in Sources */,
 				E09F7EC32C3D043A008707BD /* OneRepMaxViewModel.swift in Sources */,
@@ -214,7 +216,6 @@
 				E09F7F1E2C43C957008707BD /* TabNavigationView.swift in Sources */,
 				E09F7EC82C3D70D0008707BD /* TrainingWeightViewModel.swift in Sources */,
 				E09F7EC62C3D70A8008707BD /* TrainingWeightView.swift in Sources */,
-				1156815B2C4190FA00DECFF2 /* History.swift in Sources */,
 				E09F7EB02C3CE49B008707BD /* CalculatorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

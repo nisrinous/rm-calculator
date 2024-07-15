@@ -2,7 +2,7 @@
 //  History.swift
 //  Calculator
 //
-//  Created by Renaldi Antonio on 12/07/24.
+//  Created by Renaldi Antonio on 15/07/24.
 //
 
 import Foundation
@@ -15,12 +15,14 @@ class History: Identifiable {
     var weight: Double
     var repetitions: Int
     var oneRepMax: Double
+    var trainingType: String
     
-    init(date: Date, weight: Double, repetitions: Int, oneRepMax: Double) {
+    init(date: Date, weight: Double, repetitions: Int, oneRepMax: Double, trainingType: String) {
         self.id = UUID()
         self.date = date
         self.weight = weight
         self.repetitions = repetitions
         self.oneRepMax = oneRepMax
+        self.trainingType = trainingType
     }
 }
