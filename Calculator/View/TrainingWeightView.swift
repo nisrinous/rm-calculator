@@ -25,7 +25,7 @@ struct TrainingWeightView: View {
                     .fontWeight(.semibold)
                     .font(.system(size: 15))
                     .foregroundColor(.primaryOrange)
-                TextField(" ", text: $viewModel.oneRepMax)
+                TextField("", text: $viewModel.oneRepMax)
                     .keyboardType(.decimalPad)
                     .frame(width: 100)
                     .fontWeight(.bold)
@@ -45,14 +45,16 @@ struct TrainingWeightView: View {
                     .padding(.bottom, 70)
 
                 Button(action: {
-                    viewModel.calculateTrainingWeights()
-                    isPresented.toggle()
+                    if !viewModel.oneRepMax.isEmpty {
+                        viewModel.calculateTrainingWeights()
+                        isPresented.toggle()
+                    }
                 }) {
                     Text("Details")
                         .foregroundColor(.white)
                         .font(.system(size: 17))
                         .padding()
-                        .background(Color.secondary)
+                        .background(viewModel.oneRepMax.isEmpty ? Color.secondary : Color.primaryOrange)
                         .cornerRadius(12)
                 }
                 .padding()
