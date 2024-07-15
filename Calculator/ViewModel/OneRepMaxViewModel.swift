@@ -32,13 +32,13 @@ class OneRepMaxViewModel: ObservableObject {
         percentage = (Double(weight)! / oneRepMax!) * 100
     }
 
-    func saveCalculation(modelContext: ModelContext) {
+    func saveCalculation(modelContext: ModelContext, trainingType: String) {
 //        guard let weight = Double(weight), let repetitions = Double(repetitions), let oneRepMax = oneRepMax else {
 //            return
 //        }
 
 //        let newItem = Item(timestamp: Date(), calculationType: "1RM", weight: weight, repetitions: repetitions, oneRepMax: oneRepMax, percentage: percentage ?? 0)
-        let newHistory = History(date: Date(), weight: Double(weight)!, repetitions: Int(repetitions)!, oneRepMax: oneRepMax!)
+        let newHistory = History(date: Date(), weight: Double(weight)!, repetitions: Int(repetitions)!, oneRepMax: oneRepMax!, trainingType: trainingType)
         modelContext.insert(newHistory)
     }
 }

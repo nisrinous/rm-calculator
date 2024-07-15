@@ -10,10 +10,22 @@ import SwiftUI
 struct OneRepMaxView: View {
     @StateObject private var viewModel = OneRepMaxViewModel()
     @Environment(\.modelContext) var modelContext
-
+    @State var selectedTraining = trainings[0]
+    
     var body: some View {
         NavigationView {
             VStack {
+                Divider()
+                HStack(){
+                    Picker("training", selection: $selectedTraining) {
+                        ForEach(trainings, id: \.self){ training in
+                            Text(training)
+                                .tag(training)
+                        }
+                    }
+                    .tint(.primaryOrange)
+                    Spacer()
+                }
                 Form {
                     Section(header: Text("Weight")) {
                         TextField("Weight (kg)", text: $viewModel.weight)
@@ -26,6 +38,19 @@ struct OneRepMaxView: View {
                     Button(action: viewModel.calculateOneRepMax) {
                         Text("Calculate 1RM")
                     }
+                    
+                    /// BUAT DEBUG
+//                    Button {
+//                        do {
+//                            try modelContext.delete(model: History.self)
+//                        } catch {
+//                            print("Failed to delete all schools.")
+//                        }
+//                    } label: {
+//                        Text("Hapus data")
+//                    }
+
+                    /// ----------
                     
                     if let oneRepMax = viewModel.oneRepMax {
                         Section(header: Text("Result")) {
@@ -40,7 +65,7 @@ struct OneRepMaxView: View {
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button(action: {
-                            viewModel.saveCalculation(modelContext: modelContext)
+                            viewModel.saveCalculation(modelContext: modelContext, trainingType: selectedTraining)
                         }, label: {
                             Text("Save")
                         })

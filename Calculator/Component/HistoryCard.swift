@@ -73,5 +73,5 @@ func formatDate(date: Date) -> String{
 }
 
 #Preview {
-    HistoryCard(history: History(date: Date.now, weight: 20, repetitions: 10, oneRepMax: 50))
+    HistoryCard(history: History(date: Date.now, weight: 20, repetitions: 10, oneRepMax: 50, trainingType: "Bench Press"))
 }

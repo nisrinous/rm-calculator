@@ -32,63 +32,71 @@ struct HistoryView: View {
         
         )
         
-        VStack(alignment: .leading){
-            HStack(){
-                Picker("training", selection: $selectedTraining) {
-                    ForEach(trainings, id: \.self){ training in
-                        Text(training)
-                            .tag(training)
+        NavigationView(content: {
+            VStack(alignment: .leading){
+                Divider()
+                HStack(){
+                    Picker("training", selection: $selectedTraining) {
+                        ForEach(trainings, id: \.self){ training in
+                            Text(training)
+                                .tag(training)
+                        }
+                    }
+                    .tint(.primaryOrange)
+                    Spacer()
+                }
+                
+                VStack (alignment: .leading) {
+                    Chart {
+                        ForEach(histories){ history in
+                            if history.trainingType == selectedTraining {
+                                AreaMark(
+                                    x: .value("Date", history.date),
+                                    y: .value("1RM", history.oneRepMax)
+                                )
+                                .interpolationMethod(.catmullRom)
+                                .foregroundStyle(curGradient)
+                                LineMark(
+                                    x: .value("Date", history.date),
+                                    y: .value("1RM", history.oneRepMax)
+                                )
+                                .foregroundStyle(.primaryOrange)
+                                .interpolationMethod(.catmullRom)
+                                .lineStyle(.init(lineWidth: 2))
+                                .symbol {
+                                    Circle()
+                                        .fill(Color.white)
+                                        .frame(width: 18)
+                                        .overlay(
+                                            Circle()
+                                                .fill(.primaryOrange)
+                                                .frame(width: 12)
+                                        )
+                                }
+                            }
+                        }
+                    }
+                    .frame(height: 200)
+                    .padding(.bottom)
+                    Text("1RM History")
+                        .font(.title2)
+                    Divider()
+                    
+                    ScrollView{
+                        ForEach(histories) { history in
+                            if history.trainingType == selectedTraining {
+                                HistoryCard(history: history)
+                            }
+                        }
                     }
                 }
-                .tint(.primaryOrange)
+                .padding(.all)
+                
+                
                 Spacer()
             }
-//            Spacer()
-            
-            Chart {
-                ForEach(histories){ history in
-                    AreaMark(
-                        x: .value("Date", history.date),
-                        y: .value("1RM", history.oneRepMax)
-                    )
-                    .interpolationMethod(.catmullRom)
-                    .foregroundStyle(curGradient)
-                    LineMark(
-                        x: .value("Date", history.date),
-                        y: .value("1RM", history.oneRepMax)
-                    )
-                    .foregroundStyle(.primaryOrange)
-                    .interpolationMethod(.catmullRom)
-                    .lineStyle(.init(lineWidth: 2))
-                    .symbol {
-                        Circle()
-                            .fill(Color.white)
-                            .frame(width: 18)
-                            .overlay(
-                                Circle()
-                                    .fill(.primaryOrange)
-                                    .frame(width: 12)
-                            )
-                    }
-                    
-                }
-            }
-            .frame(height: 360)
-            .padding(.bottom)
-            
-            Text("1RM History")
-                .font(.title2)
-            Divider()
-            
-            ScrollView{
-                ForEach(histories) { history in
-                    HistoryCard(history: history)
-                }
-            }
-            
-            Spacer()
-        }
-        .padding(.all)
+            .navigationTitle("History")
+        })
     }
 }
 
