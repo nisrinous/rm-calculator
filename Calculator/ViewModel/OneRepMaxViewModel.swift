@@ -14,7 +14,7 @@ class OneRepMaxViewModel: ObservableObject {
     @Published var repetitions: String = ""
     @Published var oneRepMax: Double?
     @Published var percentage: Double?
-    @Environment(\.modelContext) private var modelContext
+//    @Environment(\.modelContext) private var modelContext
 
 
     func calculateOneRepMax() {
@@ -38,13 +38,13 @@ class OneRepMaxViewModel: ObservableObject {
        return 0
     }
 
+    func saveCalculation(modelContext: ModelContext, trainingType: String) {
+//        guard let weight = Double(weight), let repetitions = Double(repetitions), let oneRepMax = oneRepMax else {
+//            return
+//        }
 
-    func saveCalculation() {
-        guard let weight = Double(weight), let repetitions = Double(repetitions), let oneRepMax = oneRepMax else {
-            return
-        }
-
-        let newItem = Item(timestamp: Date(), calculationType: "1RM", weight: weight, repetitions: repetitions, oneRepMax: oneRepMax)
-        modelContext.insert(newItem)
+//        let newItem = Item(timestamp: Date(), calculationType: "1RM", weight: weight, repetitions: repetitions, oneRepMax: oneRepMax, percentage: percentage ?? 0)
+        let newHistory = History(date: Date(), weight: Double(weight)!, repetitions: Int(repetitions)!, oneRepMax: oneRepMax!, trainingType: trainingType)
+        modelContext.insert(newHistory)
     }
 }
