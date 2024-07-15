@@ -27,7 +27,7 @@
 		E09F7EC82C3D70D0008707BD /* TrainingWeightViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09F7EC72C3D70D0008707BD /* TrainingWeightViewModel.swift */; };
 		E09F7ECA2C3D95A3008707BD /* CalculatorButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09F7EC92C3D95A3008707BD /* CalculatorButtonViewModel.swift */; };
 		E09F7ECC2C3D95F6008707BD /* CalculatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09F7ECB2C3D95F6008707BD /* CalculatorButton.swift */; };
-		E09F7ECE2C3D9629008707BD /* CalculatorButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09F7ECD2C3D9629008707BD /* CalculatorButtons.swift */; };
+		E09F7ECE2C3D9629008707BD /* CalculatorButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09F7ECD2C3D9629008707BD /* CalculatorButtonsView.swift */; };
 		E09F7F1E2C43C957008707BD /* TabNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09F7F1D2C43C957008707BD /* TabNavigationView.swift */; };
 		E09F7F282C43CBF2008707BD /* HistoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09F7F272C43CBF2008707BD /* HistoryCard.swift */; };
 /* End PBXBuildFile section */
@@ -55,9 +55,10 @@
 		E09F7EC72C3D70D0008707BD /* TrainingWeightViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingWeightViewModel.swift; sourceTree = "<group>"; };
 		E09F7EC92C3D95A3008707BD /* CalculatorButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButtonViewModel.swift; sourceTree = "<group>"; };
 		E09F7ECB2C3D95F6008707BD /* CalculatorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButton.swift; sourceTree = "<group>"; };
-		E09F7ECD2C3D9629008707BD /* CalculatorButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButtons.swift; sourceTree = "<group>"; };
+		E09F7ECD2C3D9629008707BD /* CalculatorButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButtonsView.swift; sourceTree = "<group>"; };
 		E09F7F1D2C43C957008707BD /* TabNavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabNavigationView.swift; sourceTree = "<group>"; };
 		E09F7F272C43CBF2008707BD /* HistoryCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryCard.swift; path = Calculator/Component/HistoryCard.swift; sourceTree = SOURCE_ROOT; };
+		E09F7F292C44EF3A008707BD /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				E09F7EAE2C3CE49B008707BD /* Calculator */,
+				E09F7F292C44EF3A008707BD /* Calculator.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,7 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				E09F7ECB2C3D95F6008707BD /* CalculatorButton.swift */,
-				E09F7ECD2C3D9629008707BD /* CalculatorButtons.swift */,
+				E09F7ECD2C3D9629008707BD /* CalculatorButtonsView.swift */,
 				E09F7F272C43CBF2008707BD /* HistoryCard.swift */,
 				E09F7F1D2C43C957008707BD /* TabNavigationView.swift */,
 				4DAA72E02C4427DE0003223C /* ChartOneRM.swift */,
@@ -165,7 +167,7 @@
 			);
 			name = Calculator;
 			productName = Calculator;
-			productReference = 1156816D2C4532F200DECFF2 /* Calculator.app */;
+			productReference = E09F7F292C44EF3A008707BD /* Calculator.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -220,7 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E09F7ECE2C3D9629008707BD /* CalculatorButtons.swift in Sources */,
+				E09F7ECE2C3D9629008707BD /* CalculatorButtonsView.swift in Sources */,
 				E09F7EC02C3D035F008707BD /* OneRepMaxView.swift in Sources */,
 				1156816F2C45336200DECFF2 /* WarmUpSheetViewModel.swift in Sources */,
 				1156816A2C45119100DECFF2 /* History.swift in Sources */,
@@ -387,7 +389,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Calculator/Preview Content\"";
-				DEVELOPMENT_TEAM = C59QF2W8P6;
+				DEVELOPMENT_TEAM = 8FPJ93WVDR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -417,7 +419,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Calculator/Preview Content\"";
-				DEVELOPMENT_TEAM = C59QF2W8P6;
+				DEVELOPMENT_TEAM = 8FPJ93WVDR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
