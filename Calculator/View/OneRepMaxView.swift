@@ -9,6 +9,7 @@ import SwiftUI
 
 struct OneRepMaxView: View {
     @StateObject private var viewModel = OneRepMaxViewModel()
+    @Environment(\.modelContext) var modelContext
 
     var body: some View {
         NavigationView {
@@ -29,19 +30,22 @@ struct OneRepMaxView: View {
                     if let oneRepMax = viewModel.oneRepMax {
                         Section(header: Text("Result")) {
                             Text("Estimated 1RM: \(oneRepMax, specifier: "%.2f") kg")
+                            if let percentage = viewModel.percentage {
+                                Text("Estimated percentage: \(percentage, specifier: "%.2f") %")
+                            }
                         }
                     }
                 }
                 .navigationTitle("1RM Calculator")
-//                .toolbar {
-//                    ToolbarItem(placement: .navigationBarTrailing) {
-//                        Button(action: {
-//                            viewModel.saveCalculation()
-//                        }, label: {
-//                            Text("Save")
-//                        })
-//                    }
-//                }
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button(action: {
+                            viewModel.saveCalculation(modelContext: modelContext)
+                        }, label: {
+                            Text("Save")
+                        })
+                    }
+                }
             }
         }
     }
