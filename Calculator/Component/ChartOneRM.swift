@@ -147,17 +147,21 @@ struct ChartOneRM: View {
             updateMacros()
         }
         .onChange(of: calculatorViewModel.displays[0]) {
-            if let weight = Double(calculatorViewModel.displays[0]) {
-                viewModel.weight = String(weight)
-                viewModel.calculateOneRepMax()
-                updateMacros()
+            if !calculatorViewModel.displays[0].isEmpty {
+                if let weight = Double(calculatorViewModel.displays[0]) {
+                    viewModel.weight = String(weight)
+                    viewModel.calculateOneRepMax()
+                    updateMacros()
+                }
             }
         }
         .onChange(of: calculatorViewModel.displays[1]) {
-            if let repetitions = Int(calculatorViewModel.displays[1]) {
-                viewModel.repetitions = String(repetitions)
-                viewModel.calculateOneRepMax()
-                updateMacros()
+            if !calculatorViewModel.displays[0].isEmpty {
+                if let repetitions = Int(calculatorViewModel.displays[1]) {
+                    viewModel.repetitions = String(repetitions)
+                    viewModel.calculateOneRepMax()
+                    updateMacros()
+                }
             }
         }
     }

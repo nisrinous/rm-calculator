@@ -115,7 +115,14 @@ struct HistoryView: View {
                 
                 Spacer()
             }
-            .navigationTitle("History")
+            .toolbar{
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Text("History")
+                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                }
+            }
+            
         })
     }
 }

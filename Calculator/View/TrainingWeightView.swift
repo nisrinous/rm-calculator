@@ -7,6 +7,10 @@ struct TrainingWeightView: View {
 
     @State var isPresented: Bool = false
     @State var activeInputIndex = 0
+    
+    func hideKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
 
     var body: some View {
         NavigationView {
@@ -38,6 +42,12 @@ struct TrainingWeightView: View {
                     .font(.system(size: 48))
                     .multilineTextAlignment(.center)
                     .padding()
+                    .onTapGesture {
+                        hideKeyboard()
+                    }
+                    .onChange(of: calculatorViewModel.displays[0]) {
+                        hideKeyboard()
+                    }
                 
                 Text("kg")
                     .fontWeight(.bold)
@@ -48,6 +58,7 @@ struct TrainingWeightView: View {
                 
                 Button(action: {
                     if !calculatorViewModel.displays[0].isEmpty {
+                        hideKeyboard()
                         viewModel.oneRepMax = calculatorViewModel.displays[0]
                         viewModel.calculateTrainingWeights()
                         isPresented.toggle()
