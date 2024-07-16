@@ -11,6 +11,7 @@ struct TrainingWeightView: View {
     var body: some View {
         NavigationView {
             VStack {
+                Divider()
                 HStack {
                     Picker("Training", selection: $selectedTraining) {
                         ForEach(trainings, id: \.self) { training in
@@ -92,7 +93,7 @@ struct TrainingWeightResult: View {
     var body: some View {
         ScrollView {
             VStack(alignment:.leading) {
-                Text("Repetition %")
+                Text("% 1RM")
                     .font(.system(size: 19))
                     .fontWeight(.medium)
                 VStack {
