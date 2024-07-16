@@ -23,7 +23,7 @@ struct CalculatorButton: View {
                     .background(Color.secondary.opacity(0.1))
                     .cornerRadius(12)
             } else if title == "," {
-                Text(".")
+                Text(",")
                     .font(.title)
                     .frame(width: 100, height: 50)
                     .foregroundColor(.primary)

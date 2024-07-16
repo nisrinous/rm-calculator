@@ -29,7 +29,7 @@ struct TrainingWeightView: View {
                     Spacer()
                 }
                 .padding(.leading, 5)
-                Text("input_your_one_rm")
+                Text("Input Your 1RM")
                     .fontWeight(.semibold)
                     .font(.system(size: 15))
                     .foregroundColor(.primaryOrange)
@@ -72,9 +72,11 @@ struct TrainingWeightView: View {
                         .background(calculatorViewModel.displays[0].isEmpty ? Color.secondary : Color.primaryOrange)
                         .cornerRadius(12)
                 }
+                
+                Spacer()
 
                 CalculatorButtonsView(calculatorViewModel: calculatorViewModel, activeInputIndex: $activeInputIndex)
-                
+                Spacer()
             }
             .sheet(isPresented: $isPresented) {
                 TrainingWeightResult(viewModel: viewModel)
