@@ -46,6 +46,7 @@ struct TrainingWeightView: View {
                 
                 Button(action: {
                     if !calculatorViewModel.displays[0].isEmpty {
+                        viewModel.oneRepMax = calculatorViewModel.displays[0]
                         viewModel.calculateTrainingWeights()
                         isPresented.toggle()
                     }
