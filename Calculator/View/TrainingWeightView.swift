@@ -53,6 +53,7 @@ struct TrainingWeightView: View {
                     Text("Details")
                         .foregroundColor(.white)
                         .font(.system(size: 17))
+                        .fontWeight(.bold)
                         .padding()
                         .background(viewModel.oneRepMax.isEmpty ? Color.secondary : Color.primaryOrange)
                         .cornerRadius(12)
@@ -64,9 +65,10 @@ struct TrainingWeightView: View {
             .navigationTitle("Rep Max")
             .sheet(isPresented: $isPresented) {
                 TrainingWeightResult(viewModel: viewModel)
-                    .background(.secondaryGrey)
-                    .frame(maxWidth: .infinity, maxHeight: UIScreen.main.bounds.height / 2)
-                    .presentationDetents([.fraction(0.5)])
+                    .background(Color(red: 0.89, green: 0.89, blue: 0.9))
+//                    .frame(maxWidth: .infinity, maxHeight: UIScreen.main.bounds.height / 2)
+//                    .presentationDetents([.fraction(0.5)])
+                    .presentationDetents([.fraction(0.5), .medium, .large])
             }
         }
     }
@@ -134,10 +136,9 @@ struct TrainingWeightResult: View {
                         .foregroundColor(.gray),
                     alignment: .top
                 )
+                Spacer()
             }
-            .background(.secondaryGrey)
-        .padding()
+            .padding()
         }
-
     }
 }
