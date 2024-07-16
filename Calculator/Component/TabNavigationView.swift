@@ -12,21 +12,17 @@ struct TabNavigationView: View {
         TabView {
             FirstTabView()
                 .tabItem {
-                    Label("Calculator", systemImage: "equal")
+                    Label("1RM Calc", systemImage: "dumbbell")
                 }
             
             SecondTabView()
                 .tabItem {
-                    Label("Table", systemImage: "dumbbell")
+                    Label("Rep Max", systemImage: "percent")
                 }
             
             HistoryTabView()
                 .tabItem {
-                    Label("History", systemImage: "star")
-                }
-            PlannerTabView()
-                .tabItem {
-                    Label("Planner", systemImage: "list.bullet.clipboard")
+                    Label("History", systemImage: "clock.arrow.2.circlepath")
                 }
         }
         .accentColor(.primaryOrange)
@@ -48,12 +44,6 @@ struct SecondTabView: View {
 struct HistoryTabView: View {
     var body: some View {
         HistoryView()
-    }
-}
-
-struct PlannerTabView: View {
-    var body: some View {
-        Text("Planner view")
     }
 }
 
