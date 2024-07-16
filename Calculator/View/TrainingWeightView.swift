@@ -76,6 +76,7 @@ struct TrainingWeightView: View {
                         .cornerRadius(12)
                 }
                 .padding(.top, 30)
+                .disabled(calculatorViewModel.displays[0].isEmpty)
 
                 Spacer()
                 CalculatorButtonsView(calculatorViewModel: calculatorViewModel, activeInputIndex: $activeInputIndex)
