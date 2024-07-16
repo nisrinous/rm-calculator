@@ -32,15 +32,16 @@ struct TrainingWeightView: View {
 
                 TextField("0", text: $calculatorViewModel.displays[0])
                     .frame(width: 200)
+                    .foregroundColor(.primaryOrange)
                     .fontWeight(.bold)
                     .font(.system(size: 48))
                     .multilineTextAlignment(.center)
                     .padding()
                 
                 Text("kg")
-                    .fontWeight(.regular)
+                    .fontWeight(.bold)
                     .font(.system(size: 16))
-                    .foregroundColor(.secondary)
+                    .foregroundColor(.black)
                     .padding(.bottom, 70)
                     .padding(.top, -20)
                 
@@ -51,7 +52,7 @@ struct TrainingWeightView: View {
                         isPresented.toggle()
                     }
                 }) {
-                    Text("Details")
+                    Text("View % 1RM")
                         .foregroundColor(.white)
                         .font(.system(size: 17))
                         .fontWeight(.bold)
@@ -66,7 +67,7 @@ struct TrainingWeightView: View {
             }
             .sheet(isPresented: $isPresented) {
                 TrainingWeightResult(viewModel: viewModel)
-                    .background(Color(red: 0.89, green: 0.89, blue: 0.9))
+                    .background(.secondaryGrey)
 //                    .frame(maxWidth: .infinity, maxHeight: UIScreen.main.bounds.height / 2)
 //                    .presentationDetents([.fraction(0.5)])
                     .presentationDetents([.fraction(0.5), .medium, .large])
@@ -92,49 +93,64 @@ struct TrainingWeightResult: View {
     var body: some View {
         ScrollView {
             VStack(alignment:.leading) {
-                Text("Repetition %")
+                Text("% 1RM")
                     .font(.system(size: 19))
                     .fontWeight(.medium)
                 VStack {
-                    ForEach(viewModel.trainingWeights.indices, id: \.self) { index in
-                        HStack{
-                            HStack{
-                                Image(systemName: "percent")
-                                    .resizable()
-                                    .foregroundColor(.primaryOrange)
-                                    .frame(width: 15, height: 15)
-                                Text("\(viewModel.percentages[index], specifier: "%.0f") %")
-                            }
-                            Spacer()
-                            HStack{
-                                Image(systemName: "scalemass")
-                                    .resizable()
-                                    .foregroundColor(.primaryOrange)
-                                    .frame(width: 15, height: 15)
-                                Text("\(viewModel.trainingWeights[index], specifier: "%.0f") kg")
-                            }
-                            Spacer()
-                            HStack{
-                                Image(systemName: "flame")
-                                    .resizable()
-                                    .foregroundColor(.primaryOrange)
-                                    .frame(width: 15, height: 15)
-                                Text("\(viewModel.repetition[index], specifier: "%.0f") Rep")
-                            }
-                            Spacer()
-                            HStack{
-                                Image(systemName: "figure.walk.circle")
-                                    .resizable()
-                                    .foregroundColor(.primaryOrange)
-                                    .frame(width: 15, height: 15)
-                                Text("Muscle")
-                            }
+                    VStack(alignment:.leading){
+                        Text("Strength")
+                            .font(.system(size: 16))
+                            .fontWeight(.medium)
+                        VStack {
+                            SubList(viewModel: viewModel, indices: [10,9])
                         }
-                        .padding(.vertical, 10)
-                        .padding(.horizontal, 15)
-                        .background(.white)
-                        .cornerRadius(25)
-                        .font(.system(size: 15))
+                        .padding()
+                        .background(.greyTable)
+                        .cornerRadius(15)
+                            
+                    }
+                    VStack(alignment:.leading){
+                        Text("Power")
+                            .font(.system(size: 16))
+                            .fontWeight(.medium)
+                        VStack {
+                            SubList(viewModel: viewModel, indices: [8])
+                        }
+                        .padding()
+                        .background(.greyTable)
+                        .cornerRadius(15)
+                    }
+                    VStack(alignment:.leading){
+                        Text("Muscle")
+                            .font(.system(size: 16))
+                            .fontWeight(.medium)
+                        VStack {
+                            SubList(viewModel: viewModel, indices: [7,6])
+                        }
+                        .padding()
+                        .background(.greyTable)
+                        .cornerRadius(15)
+                    }
+                    VStack(alignment:.leading){
+                        Text("Endurance")
+                            .font(.system(size: 16))
+                            .fontWeight(.medium)
+                        VStack {
+                            SubList(viewModel: viewModel, indices: [5,4])
+                        }.padding()
+                            .background(.greyTable)
+                            .cornerRadius(15)
+                    }
+                    VStack(alignment:.leading){
+                        Text("Explosive Power")
+                            .font(.system(size: 16))
+                            .fontWeight(.medium)
+                        VStack {
+                            SubList(viewModel: viewModel, indices: [3,2,1,0])
+                        }
+                        .padding()
+                        .background(.greyTable)
+                        .cornerRadius(15)
                     }
                 }
                 .padding(.top, 10)
@@ -147,6 +163,48 @@ struct TrainingWeightResult: View {
                 Spacer()
             }
             .padding()
+        }
+    }
+}
+
+struct SubList: View {
+    @ObservedObject var viewModel: TrainingWeightViewModel
+    let indices:[Int]
+    
+    var body: some View {
+        ForEach(indices, id: \.self) { index in
+            HStack {
+                Spacer()
+                HStack {
+                    Image(systemName: "percent")
+                        .resizable()
+                        .foregroundColor(.primaryOrange)
+                        .frame(width: 15, height: 15)
+                    Text("\(viewModel.percentages[index], specifier: "%.0f") %")
+                }
+                Spacer()
+                HStack {
+                    Image(systemName: "scalemass")
+                        .resizable()
+                        .foregroundColor(.primaryOrange)
+                        .frame(width: 15, height: 15)
+                    Text("\(viewModel.trainingWeights[index], specifier: "%.0f") kg")
+                }
+                Spacer()
+                HStack {
+                    Image(systemName: "flame")
+                        .resizable()
+                        .foregroundColor(.primaryOrange)
+                        .frame(width: 15, height: 15)
+                    Text("\(viewModel.repetition[index], specifier: "%.0f") Rep")
+                }
+                Spacer()
+            }
+            .padding(.vertical, 10)
+            .padding(.horizontal, 15)
+            .background(Color.secondaryGrey)
+            .cornerRadius(25)
+            .font(.system(size: 15))
         }
     }
 }
