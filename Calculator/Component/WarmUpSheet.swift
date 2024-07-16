@@ -39,17 +39,12 @@ struct WarmUpSheet: View {
                                 
                 if let oneRepMax = viewModel2.oneRepMax {
                     WarmUpCard(number: 1, reps: "10-12", weight: "x \(viewModel.calculateWeightSuggestions(oneRepMax: oneRepMax, percentage: 30.0)) kg")
-                        .background(.cardWarmUp)
+                        
                     WarmUpCard(number: 2, reps: "8-10", weight: "x \(viewModel.calculateWeightSuggestions(oneRepMax: oneRepMax, percentage: 40.0)) kg")
-                        .background(.cardWarmUp)
                     WarmUpCard(number: 3, reps: "6-8", weight: "x \(viewModel.calculateWeightSuggestions(oneRepMax: oneRepMax, percentage: 50.0)) kg")
-                        .background(.cardWarmUp)
                     WarmUpCard(number: 4, reps: "4-6", weight: "x \(viewModel.calculateWeightSuggestions(oneRepMax: oneRepMax, percentage: 60.0)) kg")
-                        .background(.cardWarmUp)
                     WarmUpCard(number: 5, reps: "2-4", weight: "x \(viewModel.calculateWeightSuggestions(oneRepMax: oneRepMax, percentage: 70.0)) kg")
-                        .background(.cardWarmUp)
                     WarmUpCard(number: 6, reps: "1-2", weight: "x \(viewModel.calculateWeightSuggestions(oneRepMax: oneRepMax, percentage: 80.0)) kg")
-                        .background(.cardWarmUp)
                 } else {
                     Text("No data")
                         .foregroundColor(.gray)
@@ -59,6 +54,7 @@ struct WarmUpSheet: View {
                 
                Text("Once you hit a challenging 80-85%, build in smaller increments of 5% until you reach around 90-98%, then go for the single attempts. Time your rest periods for at least two minutes so that muscles can recover.")
                     .font(.subheadline)
+                    .foregroundColor(.tulisanHitamPutih)
                     .padding(.horizontal)
             }
             

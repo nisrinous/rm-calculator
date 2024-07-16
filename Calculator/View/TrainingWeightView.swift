@@ -84,7 +84,7 @@ struct TrainingWeightView: View {
             }
             .sheet(isPresented: $isPresented) {
                 TrainingWeightResult(viewModel: viewModel)
-                    .background(.secondaryGrey)
+                    .background(.sheetPage2)
 //                    .frame(maxWidth: .infinity, maxHeight: UIScreen.main.bounds.height / 2)
 //                    .presentationDetents([.fraction(0.5)])
                     .presentationDetents([.fraction(0.5), .medium, .large])
@@ -117,62 +117,68 @@ struct TrainingWeightResult: View {
             VStack(alignment:.leading) {
                 Text("% 1RM")
                     .font(.system(size: 19))
+                    .foregroundColor(.tulisanHitamPutih)
                     .fontWeight(.medium)
                 VStack {
                     VStack(alignment:.leading){
                         Text("Strength")
                             .font(.system(size: 16))
+                            .foregroundColor(.tulisanHitamPutih)
                             .fontWeight(.medium)
                         VStack {
                             SubList(viewModel: viewModel, indices: [10,9])
                         }
                         .padding()
-                        .background(.greyTable)
+                        .background(.repMaxBG1)
                         .cornerRadius(15)
                             
                     }
                     VStack(alignment:.leading){
                         Text("Power")
                             .font(.system(size: 16))
+                            .foregroundColor(.tulisanHitamPutih)
                             .fontWeight(.medium)
                         VStack {
                             SubList(viewModel: viewModel, indices: [8])
                         }
                         .padding()
-                        .background(.greyTable)
+                        .background(.repMaxBG1)
                         .cornerRadius(15)
                     }
                     VStack(alignment:.leading){
                         Text("Muscle")
                             .font(.system(size: 16))
+                            .foregroundColor(.tulisanHitamPutih)
                             .fontWeight(.medium)
                         VStack {
                             SubList(viewModel: viewModel, indices: [7,6])
                         }
                         .padding()
-                        .background(.greyTable)
+                        .background(.repMaxBG1)
                         .cornerRadius(15)
                     }
                     VStack(alignment:.leading){
                         Text("Endurance")
                             .font(.system(size: 16))
+                            .foregroundColor(.tulisanHitamPutih)
                             .fontWeight(.medium)
                         VStack {
                             SubList(viewModel: viewModel, indices: [5,4])
                         }
                         .padding()
-                        .background(.greyTable)
+                        .background(.repMaxBG1)
                         .cornerRadius(15)
                     }
                     VStack(alignment:.leading){
                         Text("Explosive Power")
                             .font(.system(size: 16))
+                            .foregroundColor(.tulisanHitamPutih)
                             .fontWeight(.medium)
                         VStack {
                             SubList(viewModel: viewModel, indices: [3,2,1,0])
                         }
                         .padding()
-                        .background(.greyTable)
+                        .background(.repMaxBG1)
                         .cornerRadius(15)
                     }
                 }
@@ -204,6 +210,7 @@ struct SubList: View {
                         .foregroundColor(.primaryOrange)
                         .frame(width: 15, height: 15)
                     Text("\(viewModel.percentages[index], specifier: "%.0f") %")
+                        .foregroundColor(.tulisanHitamPutih)
                 }
                 Spacer()
                 HStack {
@@ -212,6 +219,7 @@ struct SubList: View {
                         .foregroundColor(.primaryOrange)
                         .frame(width: 15, height: 15)
                     Text("\(viewModel.trainingWeights[index], specifier: "%.0f") kg")
+                        .foregroundColor(.tulisanHitamPutih)
                 }
                 Spacer()
                 HStack {
@@ -220,12 +228,13 @@ struct SubList: View {
                         .foregroundColor(.primaryOrange)
                         .frame(width: 15, height: 15)
                     Text("\(viewModel.repetition[index], specifier: "%.0f") Rep")
+                        .foregroundColor(.tulisanHitamPutih)
                 }
                 Spacer()
             }
             .padding(.vertical, 10)
             .padding(.horizontal, 15)
-            .background(Color.secondaryGrey)
+            .background(.repMaxBG2)
             .cornerRadius(25)
             .font(.system(size: 15))
         }

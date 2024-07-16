@@ -137,7 +137,7 @@ struct ChartOneRM: View {
             .disabled(viewModel.weight.isEmpty || viewModel.repetitions.isEmpty)
             .sheet(isPresented: $isShowingDetail) {
                 WarmUpSheet(viewModel2: viewModel)
-                    .background(Color(red: 0.89, green: 0.89, blue: 0.9))
+                    .background(.sheetPage1)
                     .presentationDetents([.fraction(0.5), .medium, .large])
             }
             .padding(.bottom, 1)
