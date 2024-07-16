@@ -2,127 +2,424 @@
   "sourceLanguage" : "en",
   "strings" : {
     "." : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "."
+          }
+        }
+      }
     },
     "% 1RM" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "% 1RM"
+          }
+        }
+      }
     },
     "%.0f %%" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%.0f %%"
+          }
+        }
+      }
     },
     "%.0f kg" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%.0f kg"
+          }
+        }
+      }
     },
     "%.0f Rep" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%.0f Rep"
+          }
+        }
+      }
     },
     "%.1f" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%.1f"
+          }
+        }
+      }
     },
     "%@" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        }
+      }
+    },
+    "%@ and build slowly. We recommend having a coach or spotter on hand to keep you safe and accountable." : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ dan naikkan beban perlahan. Bantuan dari pelatih atau spotter membantu Anda untuk tetap aman dan akuntabel."
+          }
+        }
+      }
     },
     "%lld" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        }
+      }
     },
     "0" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "0"
+          }
+        }
+      }
     },
     "0,0" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "0,0"
+          }
+        }
+      }
     },
     "1RM" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1RM"
+          }
+        }
+      }
     },
     "1RM Calc" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1RM Calc"
+          }
+        }
+      }
     },
     "1RM Calculator" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kalkulator 1RM"
+          }
+        }
+      }
     },
     "1RM History" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Riwayat 1RM"
+          }
+        }
+      }
     },
     "Date" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tanggal"
+          }
+        }
+      }
     },
-    "Don’t rush and build slowly. We recommend having a coach or spotter on hand to keep you safe and accountable." : {
-
+    "Don't rush" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jangan terburu-buru"
+          }
+        }
+      }
     },
     "Endurance" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Daya Tahan"
+          }
+        }
+      }
     },
     "Explosive Power" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ledakan Tenaga"
+          }
+        }
+      }
     },
     "Got it!" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Baik!"
+          }
+        }
+      }
     },
     "History" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Riwayat"
+          }
+        }
+      }
     },
-    "input_your_one_rm" : {
-
+    "Input Your 1RM" : {
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Masukkan 1RM Kamu"
+          }
+        }
+      }
     },
     "kg" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "kg"
+          }
+        }
+      }
     },
     "Macros" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Macros"
+          }
+        }
+      }
     },
     "Muscle" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otot"
+          }
+        }
+      }
     },
     "No data" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tidak ada data"
+          }
+        }
+      }
     },
     "Once you hit a challenging 80-85%, build in smaller increments of 5% until you reach around 90-98%, then go for the single attempts. Time your rest periods for at least two minutes so that muscles can recover." : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Setelah mencapai beban 80-85%, gunakan persentase kenaikan lebih kecil sekitar 5% sampai mencapai 90-98% 1RM, lalu lakukan percobaan repetisi tunggal. Lakukan istirahat antar set minimal 2 menit untuk memberikan kesempatan pemulihan otot."
+          }
+        }
+      }
     },
     "Perform sets as follow:" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lakukan set sebagai berikut:"
+          }
+        }
+      }
     },
     "Power" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tenaga"
+          }
+        }
+      }
     },
     "Rep Max" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rep Max"
+          }
+        }
+      }
     },
     "Repetition" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Repetisi"
+          }
+        }
+      }
     },
     "reps" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "reps"
+          }
+        }
+      }
     },
     "Save" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Simpan"
+          }
+        }
+      }
     },
     "Saved!" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tersimpan!"
+          }
+        }
+      }
     },
     "Strength" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kekuatan"
+          }
+        }
+      }
     },
     "training" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "latihan"
+          }
+        }
+      }
     },
     "Training" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Latihan"
+          }
+        }
+      }
     },
     "View % 1RM" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lihat % 1RM"
+          }
+        }
+      }
     },
     "Warm-Up" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pemanasan"
+          }
+        }
+      }
     },
     "Warm-Up Suggestion" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saran Pemanasan"
+          }
+        }
+      }
     },
     "You haven't added any data :)" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anda belum menambahkan data :)"
+          }
+        }
+      }
     },
     "Your Estimated 1RM" : {
-
+      "localizations" : {
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Perkiraan 1RM Kamu"
+          }
+        }
+      }
     }
   },
   "version" : "1.0"

@@ -73,8 +73,9 @@ struct TrainingWeightView: View {
                         .cornerRadius(12)
                 }
 
+                Spacer()
                 CalculatorButtonsView(calculatorViewModel: calculatorViewModel, activeInputIndex: $activeInputIndex)
-                
+                Spacer()
             }
             .sheet(isPresented: $isPresented) {
                 TrainingWeightResult(viewModel: viewModel)

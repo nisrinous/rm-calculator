@@ -141,7 +141,9 @@ struct ChartOneRM: View {
             }
             .padding(.bottom, 1)
             
+            Spacer()
             CalculatorButtonsView(calculatorViewModel: calculatorViewModel, activeInputIndex: $activeInputIndex)
+            Spacer()
         }
         .onAppear {
             updateMacros()
