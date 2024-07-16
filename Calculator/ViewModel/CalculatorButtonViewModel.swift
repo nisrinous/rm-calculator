@@ -8,7 +8,7 @@
 import SwiftUI
 
 class CalculatorViewModel: ObservableObject {
-    @Published var displays: [String] = ["0", "0"]
+    @Published var displays: [String] = ["", ""]
     
     let buttons = [
         ["1", "2", "3"],

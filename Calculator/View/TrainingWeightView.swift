@@ -3,7 +3,10 @@ import SwiftUI
 struct TrainingWeightView: View {
     @State var selectedTraining = trainings[0]
     @StateObject private var viewModel = TrainingWeightViewModel()
+    @ObservedObject var calculatorViewModel = CalculatorViewModel()
+
     @State var isPresented: Bool = false
+    @State var activeInputIndex = 0
 
     var body: some View {
         NavigationView {
@@ -25,27 +28,24 @@ struct TrainingWeightView: View {
                     .fontWeight(.semibold)
                     .font(.system(size: 15))
                     .foregroundColor(.primaryOrange)
-                TextField("", text: $viewModel.oneRepMax)
-                    .keyboardType(.decimalPad)
-                    .frame(width: 100)
+                    .padding(.bottom, 50)
+
+                TextField("0", text: $calculatorViewModel.displays[0])
+                    .frame(width: 200)
                     .fontWeight(.bold)
                     .font(.system(size: 48))
                     .multilineTextAlignment(.center)
                     .padding()
-
-                Text("--")
-                    .fontWeight(.bold)
-                    .font(.system(size: 48))
-                    .foregroundColor(.secondary)
-                    .padding(.top, -18)
+                
                 Text("kg")
                     .fontWeight(.regular)
                     .font(.system(size: 16))
                     .foregroundColor(.secondary)
                     .padding(.bottom, 70)
-
+                    .padding(.top, -20)
+                
                 Button(action: {
-                    if !viewModel.oneRepMax.isEmpty {
+                    if !calculatorViewModel.displays[0].isEmpty {
                         viewModel.calculateTrainingWeights()
                         isPresented.toggle()
                     }
@@ -54,19 +54,26 @@ struct TrainingWeightView: View {
                         .foregroundColor(.white)
                         .font(.system(size: 17))
                         .padding()
-                        .background(viewModel.oneRepMax.isEmpty ? Color.secondary : Color.primaryOrange)
+                        .background(calculatorViewModel.displays[0].isEmpty ? Color.secondary : Color.primaryOrange)
                         .cornerRadius(12)
                 }
                 .padding()
 
-                Spacer()
+                CalculatorButtonsView(calculatorViewModel: calculatorViewModel, activeInputIndex: $activeInputIndex)
+                
             }
-            .navigationTitle("Rep Max")
             .sheet(isPresented: $isPresented) {
                 TrainingWeightResult(viewModel: viewModel)
                     .background(.secondaryGrey)
                     .frame(maxWidth: .infinity, maxHeight: UIScreen.main.bounds.height / 2)
                     .presentationDetents([.fraction(0.5)])
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading, content: {
+                    Text("Rep Max")
+                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                })
             }
         }
     }
