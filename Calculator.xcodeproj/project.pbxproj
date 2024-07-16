@@ -10,7 +10,7 @@
 		115681572C41446E00DECFF2 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115681562C41446E00DECFF2 /* HistoryView.swift */; };
 		1156816A2C45119100DECFF2 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115681692C45119100DECFF2 /* History.swift */; };
 		1156816F2C45336200DECFF2 /* WarmUpSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1156816E2C45336200DECFF2 /* WarmUpSheetViewModel.swift */; };
-		2E7BC9772C41490D00FF1A6A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2E7BC9762C41490D00FF1A6A /* Localizable.strings */; };
+		2E400D2C2C46B9C500E09DC0 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 2E400D2B2C46B9C500E09DC0 /* Localizable.xcstrings */; };
 		4D628D532C44E24A004A9635 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D628D522C44E24A004A9635 /* CustomTextField.swift */; };
 		4DAA72E12C4427DE0003223C /* ChartOneRM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA72E02C4427DE0003223C /* ChartOneRM.swift */; };
 		4DAA72E32C4428380003223C /* WarmUpSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA72E22C4428380003223C /* WarmUpSheet.swift */; };
@@ -36,8 +36,8 @@
 		115681562C41446E00DECFF2 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		115681692C45119100DECFF2 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		1156816E2C45336200DECFF2 /* WarmUpSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarmUpSheetViewModel.swift; sourceTree = "<group>"; };
-		2E7BC9752C41490D00FF1A6A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		2E7BC9782C41495000FF1A6A /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2E400D2A2C46B99C00E09DC0 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E400D2B2C46B9C500E09DC0 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		4D628D522C44E24A004A9635 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		4DAA72E02C4427DE0003223C /* ChartOneRM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartOneRM.swift; sourceTree = "<group>"; };
 		4DAA72E22C4428380003223C /* WarmUpSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarmUpSheet.swift; sourceTree = "<group>"; };
@@ -57,7 +57,6 @@
 		E09F7ECD2C3D9629008707BD /* CalculatorButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButtonsView.swift; sourceTree = "<group>"; };
 		E09F7F1D2C43C957008707BD /* TabNavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabNavigationView.swift; sourceTree = "<group>"; };
 		E09F7F272C43CBF2008707BD /* HistoryCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryCard.swift; path = Calculator/Component/HistoryCard.swift; sourceTree = SOURCE_ROOT; };
-		E09F7F2E2C46907B008707BD /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Calculator.app; path = "/Users/nurnisrina/Documents/projects/rm-calculator/build/Debug-iphoneos/Calculator.app"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				E09F7EAE2C3CE49B008707BD /* Calculator */,
+				2E400D2A2C46B99C00E09DC0 /* Calculator.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,8 +86,8 @@
 				E09F7EC42C3D0465008707BD /* View */,
 				E09F7EC12C3D0421008707BD /* ViewModel */,
 				E09F7EB52C3CE49D008707BD /* Assets.xcassets */,
+				2E400D2B2C46B9C500E09DC0 /* Localizable.xcstrings */,
 				E09F7EB72C3CE49D008707BD /* Preview Content */,
-				2E7BC9762C41490D00FF1A6A /* Localizable.strings */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -165,7 +165,7 @@
 			);
 			name = Calculator;
 			productName = Calculator;
-			productReference = E09F7F2E2C46907B008707BD /* Calculator.app */;
+			productReference = 2E400D2A2C46B99C00E09DC0 /* Calculator.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -208,7 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E09F7EB92C3CE49D008707BD /* Preview Assets.xcassets in Resources */,
-				2E7BC9772C41490D00FF1A6A /* Localizable.strings in Resources */,
+				2E400D2C2C46B9C500E09DC0 /* Localizable.xcstrings in Resources */,
 				E09F7EB62C3CE49D008707BD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -244,18 +244,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		2E7BC9762C41490D00FF1A6A /* Localizable.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2E7BC9752C41490D00FF1A6A /* en */,
-				2E7BC9782C41495000FF1A6A /* id */,
-			);
-			name = Localizable.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E09F7EBA2C3CE49D008707BD /* Debug */ = {

@@ -1,0 +1,129 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "." : {
+
+    },
+    "% 1RM" : {
+
+    },
+    "%.0f %%" : {
+
+    },
+    "%.0f kg" : {
+
+    },
+    "%.0f Rep" : {
+
+    },
+    "%.1f" : {
+
+    },
+    "%@" : {
+
+    },
+    "%lld" : {
+
+    },
+    "0" : {
+
+    },
+    "0,0" : {
+
+    },
+    "1RM" : {
+
+    },
+    "1RM Calc" : {
+
+    },
+    "1RM Calculator" : {
+
+    },
+    "1RM History" : {
+
+    },
+    "Date" : {
+
+    },
+    "Don’t rush and build slowly. We recommend having a coach or spotter on hand to keep you safe and accountable." : {
+
+    },
+    "Endurance" : {
+
+    },
+    "Explosive Power" : {
+
+    },
+    "Got it!" : {
+
+    },
+    "History" : {
+
+    },
+    "input_your_one_rm" : {
+
+    },
+    "kg" : {
+
+    },
+    "Macros" : {
+
+    },
+    "Muscle" : {
+
+    },
+    "No data" : {
+
+    },
+    "Once you hit a challenging 80-85%, build in smaller increments of 5% until you reach around 90-98%, then go for the single attempts. Time your rest periods for at least two minutes so that muscles can recover." : {
+
+    },
+    "Perform sets as follow:" : {
+
+    },
+    "Power" : {
+
+    },
+    "Rep Max" : {
+
+    },
+    "Repetition" : {
+
+    },
+    "reps" : {
+
+    },
+    "Save" : {
+
+    },
+    "Saved!" : {
+
+    },
+    "Strength" : {
+
+    },
+    "training" : {
+
+    },
+    "Training" : {
+
+    },
+    "View % 1RM" : {
+
+    },
+    "Warm-Up" : {
+
+    },
+    "Warm-Up Suggestion" : {
+
+    },
+    "You haven't added any data :)" : {
+
+    },
+    "Your Estimated 1RM" : {
+
+    }
+  },
+  "version" : "1.0"
+}
