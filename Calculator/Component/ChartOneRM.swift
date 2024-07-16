@@ -27,6 +27,7 @@ struct ChartOneRM: View {
     
     @State private var macros: [MacroData] = []
     @Binding var activeInputIndex: Int
+    @State private var isShowingDetail = false
     
     func hideKeyboard() {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
@@ -73,39 +74,7 @@ struct ChartOneRM: View {
                         .opacity(0.7)
                 }
             }
-            
-//                        HStack {
-//                            TextField("Weight", text: $viewModel.weight)
-//                                .keyboardType(.numberPad)
-//                                .padding()
-//                                .background(Color(red: 0.46, green: 0.46, blue: 0.5).opacity(0.12))
-//                                .cornerRadius(10)
-//                                .padding(.leading, 20)
-//                                .onChange(of: viewModel.weight) { newValue in
-//                                    viewModel.calculateOneRepMax()
-//                                    updateMacros()
-//                                }
-//            
-//                            Text("kg")
-//                                .foregroundColor(Color(red: 0.24, green: 0.24, blue: 0.26).opacity(0.3))
-//
-//                            TextField("Repetition", text: $viewModel.repetitions)
-//                                .keyboardType(.numberPad)
-//                                .padding()
-//                                .background(Color(red: 0.46, green: 0.46, blue: 0.5).opacity(0.12))
-//                                .cornerRadius(10)
-//                                .padding(.leading, 20)
-//                                .onChange(of: viewModel.repetitions) { newValue in
-//                                    viewModel.calculateOneRepMax()
-//                                    updateMacros()
-//                                }
-//            
-//                            Text("reps")
-//                                .foregroundColor(Color(red: 0.24, green: 0.24, blue: 0.26).opacity(0.3))
-//                        }
-//                        .padding(.vertical, 5)
-//                        .padding(.horizontal)
-            
+             
             //custom field
             
             HStack(alignment: .center, spacing: 95) {
@@ -120,10 +89,7 @@ struct ChartOneRM: View {
                             activeInputIndex = 0
                             hideKeyboard()
                         }
-//                        .onChange(of: viewModel.weight) {
-//                            viewModel.calculateOneRepMax()
-//                            updateMacros()
-//                        }
+
                     
                     Text("kg")
                         .foregroundColor(Color(red: 0.24, green: 0.24, blue: 0.26).opacity(0.3))
@@ -141,10 +107,7 @@ struct ChartOneRM: View {
                             activeInputIndex = 1
                             hideKeyboard()
                         }
-//                        .onChange(of: viewModel.repetitions) {
-//                            viewModel.calculateOneRepMax()
-//                            updateMacros()
-//                        }
+
                     
                     Text("reps")
                         .foregroundColor(Color(red: 0.24, green: 0.24, blue: 0.26).opacity(0.3))
@@ -154,8 +117,29 @@ struct ChartOneRM: View {
               
             }
             .padding(.leading, 16)
-            .padding(.vertical, 22)
+            .padding(.vertical, 10)
             .frame(width: 351, alignment: .leading)
+            
+            Button(action: {
+                isShowingDetail = true
+            }) {
+                Text("Warm-Up")
+                    .font(.system(size: 17))
+                    .fontWeight(.bold)
+                    .padding(.horizontal, 20)
+                    .padding(.vertical, 14)
+                    .background(viewModel.weight.isEmpty || viewModel.repetitions.isEmpty ? Color.gray : Color(red: 1, green: 0.58, blue: 0))
+                    .foregroundColor(.white)
+                    .cornerRadius(12)
+                    
+            }
+            .disabled(viewModel.weight.isEmpty || viewModel.repetitions.isEmpty)
+            .sheet(isPresented: $isShowingDetail) {
+                WarmUpSheet(viewModel2: viewModel)
+                    .background(Color(red: 0.89, green: 0.89, blue: 0.9))
+                    .presentationDetents([.fraction(0.5), .medium, .large])
+            }
+            .padding(.bottom, 1)
             
             CalculatorButtonsView(calculatorViewModel: calculatorViewModel, activeInputIndex: $activeInputIndex)
         }
@@ -198,9 +182,7 @@ struct ChartOneRM: View {
 
 }
 
-//#Preview {
-//    ChartOneRM(viewModel: OneRepMaxViewModel())
-//}
+
 
 
 

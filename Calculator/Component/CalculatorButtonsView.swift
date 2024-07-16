@@ -25,7 +25,7 @@ struct CalculatorButtonsView: View {
                 }
             }
         }
-        .padding()
+        .padding(.vertical, 2)
     }
 }
 
