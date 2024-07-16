@@ -8,33 +8,35 @@
 import SwiftUI
 
 class CalculatorViewModel: ObservableObject {
-    @Published var display = "0"
+    @Published var displays: [String] = ["", ""]
     
     let buttons = [
         ["1", "2", "3"],
         ["4", "5", "6"],
         ["7", "8", "9"],
-        ["0", ".", "x"]
+        [",", "0", "x"]
     ]
     
-    func buttonTapped(_ button: String) {
+    func buttonTapped(_ button: String, for index: Int) {
+        guard displays.indices.contains(index) else { return }
+        
         if button == "x" {
-            display = delete(expression: display)
+            displays[index] = delete(expression: displays[index])
         } else if button == "." {
-            if !display.contains(".") {
-                display += button
+            if !displays[index].contains(".") {
+                displays[index] += button
             }
         } else {
-            if display == "0" {
-                display = button
+            if displays[index] == "0" {
+                displays[index] = button
             } else {
-                display += button
+                displays[index] += button
             }
         }
     }
     
     private func delete(expression: String) -> String {
-        
-        return expression
+        return expression.isEmpty ? "0" : String(expression.dropLast())
     }
 }
+

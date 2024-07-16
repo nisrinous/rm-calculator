@@ -3,11 +3,15 @@ import SwiftUI
 struct TrainingWeightView: View {
     @State var selectedTraining = trainings[0]
     @StateObject private var viewModel = TrainingWeightViewModel()
+    @ObservedObject var calculatorViewModel = CalculatorViewModel()
+
     @State var isPresented: Bool = false
+    @State var activeInputIndex = 0
 
     var body: some View {
         NavigationView {
             VStack {
+                Divider()
                 HStack {
                     Picker("Training", selection: $selectedTraining) {
                         ForEach(trainings, id: \.self) { training in
@@ -25,27 +29,25 @@ struct TrainingWeightView: View {
                     .fontWeight(.semibold)
                     .font(.system(size: 15))
                     .foregroundColor(.primaryOrange)
-                TextField("", text: $viewModel.oneRepMax)
-                    .keyboardType(.decimalPad)
-                    .frame(width: 100)
+                    .padding(.bottom, 50)
+
+                TextField("0", text: $calculatorViewModel.displays[0])
+                    .frame(width: 200)
                     .fontWeight(.bold)
                     .font(.system(size: 48))
                     .multilineTextAlignment(.center)
                     .padding()
-
-                Text("--")
-                    .fontWeight(.bold)
-                    .font(.system(size: 48))
-                    .foregroundColor(.secondary)
-                    .padding(.top, -18)
+                
                 Text("kg")
                     .fontWeight(.regular)
                     .font(.system(size: 16))
                     .foregroundColor(.secondary)
                     .padding(.bottom, 70)
-
+                    .padding(.top, -20)
+                
                 Button(action: {
-                    if !viewModel.oneRepMax.isEmpty {
+                    if !calculatorViewModel.displays[0].isEmpty {
+                        viewModel.oneRepMax = calculatorViewModel.displays[0]
                         viewModel.calculateTrainingWeights()
                         isPresented.toggle()
                     }
@@ -53,20 +55,29 @@ struct TrainingWeightView: View {
                     Text("Details")
                         .foregroundColor(.white)
                         .font(.system(size: 17))
+                        .fontWeight(.bold)
                         .padding()
-                        .background(viewModel.oneRepMax.isEmpty ? Color.secondary : Color.primaryOrange)
+                        .background(calculatorViewModel.displays[0].isEmpty ? Color.secondary : Color.primaryOrange)
                         .cornerRadius(12)
                 }
                 .padding()
 
-                Spacer()
+                CalculatorButtonsView(calculatorViewModel: calculatorViewModel, activeInputIndex: $activeInputIndex)
+                
             }
-            .navigationTitle("Rep Max")
             .sheet(isPresented: $isPresented) {
                 TrainingWeightResult(viewModel: viewModel)
-                    .background(.secondaryGrey)
-                    .frame(maxWidth: .infinity, maxHeight: UIScreen.main.bounds.height / 2)
-                    .presentationDetents([.fraction(0.5)])
+                    .background(Color(red: 0.89, green: 0.89, blue: 0.9))
+//                    .frame(maxWidth: .infinity, maxHeight: UIScreen.main.bounds.height / 2)
+//                    .presentationDetents([.fraction(0.5)])
+                    .presentationDetents([.fraction(0.5), .medium, .large])
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading, content: {
+                    Text("Rep Max")
+                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                })
             }
         }
     }
@@ -82,7 +93,7 @@ struct TrainingWeightResult: View {
     var body: some View {
         ScrollView {
             VStack(alignment:.leading) {
-                Text("Repetition %")
+                Text("% 1RM")
                     .font(.system(size: 19))
                     .fontWeight(.medium)
                 VStack {
@@ -134,10 +145,9 @@ struct TrainingWeightResult: View {
                         .foregroundColor(.gray),
                     alignment: .top
                 )
+                Spacer()
             }
-            .background(.secondaryGrey)
-        .padding()
+            .padding()
         }
-
     }
 }
