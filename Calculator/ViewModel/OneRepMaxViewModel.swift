@@ -14,8 +14,6 @@ class OneRepMaxViewModel: ObservableObject {
     @Published var repetitions: String = ""
     @Published var oneRepMax: Double?
     @Published var percentage: Double?
-//    @Environment(\.modelContext) private var modelContext
-
 
     func calculateOneRepMax() {
         guard let weight = Double(weight), let repetitions = Double(repetitions), weight > 0, repetitions > 0 else {
@@ -40,6 +38,14 @@ class OneRepMaxViewModel: ObservableObject {
 
     func calculateWeightSuggestions(oneRepMax: Double, percentage: Double) -> Double {
         return oneRepMax * (percentage / 100.0)
+    }
+    
+    func isSaveButtonDisabled() -> Bool {
+        if weight.isEmpty || repetitions.isEmpty {
+            return true
+        }
+        
+        return false
     }
     
     func saveCalculation(modelContext: ModelContext, trainingType: String) {

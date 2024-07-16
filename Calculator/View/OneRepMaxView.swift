@@ -16,7 +16,6 @@ struct OneRepMaxView: View {
     @State var activeInputIndex = 0
     
     @State private var isPresentingAlert = false
-
     
     var body: some View {
         NavigationView {
@@ -51,7 +50,7 @@ struct OneRepMaxView: View {
                         Text("Save")
                     })
                     .disabled(
-                        viewModel.weight.isEmpty || viewModel.repetitions.isEmpty
+                        viewModel.isSaveButtonDisabled()
                     )
                     .alert("Saved!", isPresented: $isPresentingAlert) {
                         Button ("Got it!", role: .cancel) { }
