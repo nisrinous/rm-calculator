@@ -22,9 +22,9 @@ class CalculatorViewModel: ObservableObject {
         
         if button == "x" {
             displays[index] = delete(expression: displays[index])
-        } else if button == "." {
-            if !displays[index].contains(".") {
-                displays[index] += button
+        } else if button == "," {
+            if !displays[index].contains(".") && index == 0 {
+                displays[index] += "."
             }
         } else {
             if displays[index] == "0" {
