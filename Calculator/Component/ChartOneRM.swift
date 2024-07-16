@@ -22,9 +22,15 @@ enum CustomKeyboardField {
 
 struct ChartOneRM: View {
     @ObservedObject var viewModel: OneRepMaxViewModel
+    @ObservedObject var calculatorViewModel: CalculatorViewModel
     @State private var activeField: CustomKeyboardField? = nil
     
     @State private var macros: [MacroData] = []
+    @Binding var activeInputIndex: Int
+    
+    func hideKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
     
     var body: some View {
         VStack {
@@ -105,15 +111,19 @@ struct ChartOneRM: View {
             HStack(alignment: .center, spacing: 95) {
                 
                 HStack(alignment: .center, spacing: 0){
-                    CustomTextField(text: $viewModel.weight, activeField: $activeField)
+                    CustomTextField(text: $calculatorViewModel.displays[0], activeField: $activeField)
                         .padding(.leading, 10)
                         .padding(.trailing, 10)
                         .padding(.vertical, 7)
                         .frame(width: 90, height: 1, alignment: .leading)
-                        .onChange(of: viewModel.weight) { newValue in
-                            viewModel.calculateOneRepMax()
-                            updateMacros()
+                        .onTapGesture {
+                            activeInputIndex = 0
+                            hideKeyboard()
                         }
+//                        .onChange(of: viewModel.weight) {
+//                            viewModel.calculateOneRepMax()
+//                            updateMacros()
+//                        }
                     
                     Text("kg")
                         .foregroundColor(Color(red: 0.24, green: 0.24, blue: 0.26).opacity(0.3))
@@ -122,36 +132,55 @@ struct ChartOneRM: View {
                 }
                 
                 HStack(alignment: .center, spacing: 0){
-                    CustomTextField(text: $viewModel.repetitions, activeField: $activeField)
+                    CustomTextField(text: $calculatorViewModel.displays[1], activeField: $activeField)
                         .padding(.leading, 10)
                         .padding(.trailing, 10)
                         .padding(.vertical, 7)
                         .frame(width: 90, height: 1, alignment: .leading)
-                        .onChange(of: viewModel.repetitions) { newValue in
-                            viewModel.calculateOneRepMax()
-                            updateMacros()
+                        .onTapGesture {
+                            activeInputIndex = 1
+                            hideKeyboard()
                         }
+//                        .onChange(of: viewModel.repetitions) {
+//                            viewModel.calculateOneRepMax()
+//                            updateMacros()
+//                        }
                     
                     Text("reps")
                         .foregroundColor(Color(red: 0.24, green: 0.24, blue: 0.26).opacity(0.3))
                         .font(.system(size: 17))
                         .fontWeight(.semibold)
                 }
-                
               
             }
             .padding(.leading, 16)
             .padding(.vertical, 22)
             .frame(width: 351, alignment: .leading)
+            
+            CalculatorButtonsView(calculatorViewModel: calculatorViewModel, activeInputIndex: $activeInputIndex)
         }
         .onAppear {
             updateMacros()
+        }
+        .onChange(of: calculatorViewModel.displays[0]) {
+            if let weight = Double(calculatorViewModel.displays[0]) {
+                viewModel.weight = String(weight)
+                viewModel.calculateOneRepMax()
+                updateMacros()
+            }
+        }
+        .onChange(of: calculatorViewModel.displays[1]) {
+            if let repetitions = Int(calculatorViewModel.displays[1]) {
+                viewModel.repetitions = String(repetitions)
+                viewModel.calculateOneRepMax()
+                updateMacros()
+            }
         }
     }
     
     private func updateMacros() {
         let percentage = viewModel.calculatePercentages()
-        let oneRepMax = viewModel.oneRepMax
+        _ = viewModel.oneRepMax
 
         if percentage == 0 {
             macros = [
@@ -169,9 +198,9 @@ struct ChartOneRM: View {
 
 }
 
-#Preview {
-    ChartOneRM(viewModel: OneRepMaxViewModel())
-}
+//#Preview {
+//    ChartOneRM(viewModel: OneRepMaxViewModel())
+//}
 
 
 

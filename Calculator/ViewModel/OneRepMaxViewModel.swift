@@ -23,7 +23,6 @@ class OneRepMaxViewModel: ObservableObject {
             return
         }
         oneRepMax = weight * (1 + (repetitions / 30))
-        calculatePercentages()
     }
     
     func calculatePercentages() -> Int {

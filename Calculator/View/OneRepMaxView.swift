@@ -9,9 +9,13 @@ import SwiftUI
 
 struct OneRepMaxView: View {
     @StateObject private var viewModel = OneRepMaxViewModel()
+    @ObservedObject var calculatorViewModel = CalculatorViewModel()
+
     @Environment(\.modelContext) var modelContext
     @State var selectedTraining = trainings[0]
     @State private var isShowingDetail = false
+    @State var activeInputIndex = 0
+
     
     var body: some View {
         NavigationView {
@@ -29,7 +33,7 @@ struct OneRepMaxView: View {
                 
                 }
                 
-                ChartOneRM(viewModel: viewModel) // Pass viewModel to ChartOneRM
+                ChartOneRM(viewModel: viewModel, calculatorViewModel: calculatorViewModel, activeInputIndex: $activeInputIndex)
                 
                 Button(action: {
                     isShowingDetail = true
@@ -51,12 +55,7 @@ struct OneRepMaxView: View {
                         .presentationDetents([.fraction(0.5), .medium, .large])
                 }
                 .padding(.bottom, 8)
-                
-                
-                Spacer()
-                
             }
-            .navigationTitle("1RM Calculator")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {
@@ -64,6 +63,11 @@ struct OneRepMaxView: View {
                     }, label: {
                         Text("Save")
                     })
+                }
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Text("1RM Calculator")
+                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                 }
             }
             .onAppear {

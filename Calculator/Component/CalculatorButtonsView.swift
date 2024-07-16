@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CalculatorButtonsView: View {
     @ObservedObject var calculatorViewModel: CalculatorViewModel
-    @State var activeInputIndex: Int
+    @Binding var activeInputIndex: Int
     
     var body: some View {
         VStack {
@@ -29,7 +29,7 @@ struct CalculatorButtonsView: View {
     }
 }
 
-//
+
 //#Preview {
 //    CalculatorButtonsView(calculatorViewModel: CalculatorViewModel(), activeInputIndex: 0)
 //}
