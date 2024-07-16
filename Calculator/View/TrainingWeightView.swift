@@ -16,30 +16,31 @@ struct TrainingWeightView: View {
         NavigationView {
             VStack {
                 Divider()
-                HStack {
-                    Picker("Training", selection: $selectedTraining) {
-                        ForEach(trainings, id: \.self) { training in
-                            Text(training)
-                                .foregroundColor(.black)
-                                .fontWeight(.bold)
-                                .tag(training)
-                        }
-                    }
-                    .tint(.orange)
-                    Spacer()
-                }
-                .padding(.leading, 5)
+//                HStack {
+//                    Picker("Training", selection: $selectedTraining) {
+//                        ForEach(trainings, id: \.self) { training in
+//                            Text(training)
+//                                .foregroundColor(.black)
+//                                .fontWeight(.bold)
+//                                .tag(training)
+//                        }
+//                    }
+//                    .tint(.orange)
+//                    Spacer()
+//                }
+//                .padding(.leading, 5)
+                Spacer()
                 Text("Input Your 1RM")
                     .fontWeight(.semibold)
                     .font(.system(size: 15))
                     .foregroundColor(.primaryOrange)
-                    .padding(.bottom, 50)
+                    .padding(.bottom, 80)
 
                 TextField("0", text: $calculatorViewModel.displays[0])
                     .frame(width: 200)
                     .foregroundColor(.primaryOrange)
                     .fontWeight(.bold)
-                    .font(.system(size: 48))
+                    .font(.system(size: 52))
                     .multilineTextAlignment(.center)
                     .padding()
                     .onTapGesture {
@@ -48,13 +49,15 @@ struct TrainingWeightView: View {
                     .onChange(of: calculatorViewModel.displays[0]) {
                         self.hideKeyboard()
                     }
+                    .bold()
                 
                 Text("kg")
                     .fontWeight(.bold)
                     .font(.system(size: 16))
                     .foregroundColor(.black)
-                    .padding(.bottom, 70)
+                    .padding(.bottom, 80)
                     .padding(.top, -20)
+                    .opacity(0.7)
                 
                 Button(action: {
                     if !calculatorViewModel.displays[0].isEmpty {
@@ -72,6 +75,7 @@ struct TrainingWeightView: View {
                         .background(calculatorViewModel.displays[0].isEmpty ? Color.secondary : Color.primaryOrange)
                         .cornerRadius(12)
                 }
+                .padding(.top, 30)
 
                 Spacer()
                 CalculatorButtonsView(calculatorViewModel: calculatorViewModel, activeInputIndex: $activeInputIndex)

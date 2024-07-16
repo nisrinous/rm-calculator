@@ -186,7 +186,7 @@
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ledakan Tenaga"
+            "value" : "Tenaga Eksplosif"
           }
         }
       }
@@ -362,6 +362,7 @@
       }
     },
     "Training" : {
+      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {

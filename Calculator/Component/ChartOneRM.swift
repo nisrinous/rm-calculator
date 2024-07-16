@@ -69,9 +69,10 @@ struct ChartOneRM: View {
                     }
                     
                     Text("kg")
-                        .foregroundColor(Color(red: 0.11, green: 0.11, blue: 0.12))
+                        .foregroundColor(.black)
                         .font(.system(size: 16))
                         .opacity(0.7)
+                        .bold()
                 }
             }
              

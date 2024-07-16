@@ -16,7 +16,10 @@ let trainings = [
 
 struct HistoryView: View {
     @State var selectedTraining = trainings[0]
-    @Query var histories: [History]
+    @Query var historyForGraph: [History]
+    @Query(sort: \History.date, order: .reverse) var histories: [History]
+    
+    @Environment(\.modelContext) var modelContext: ModelContext
     
     var body: some View {
         let curGradient = LinearGradient(
@@ -60,7 +63,7 @@ struct HistoryView: View {
                     }
                     
                     Chart {
-                        ForEach(histories){ history in
+                        ForEach(historyForGraph){ history in
                             if history.trainingType == selectedTraining {
                                 AreaMark(
                                     x: .value("Date", history.date, unit: .day),
@@ -95,20 +98,25 @@ struct HistoryView: View {
                         .bold()
                     Divider()
                     
-                    ScrollView{
-                        if histories.isEmpty {
-                            HStack(){
-                                Spacer()
-                                Text("You haven't added any data :)")
-                                Spacer()
-                            }
+                    if histories.isEmpty {
+                        HStack(){
+                            Spacer()
+                            Text("You haven't added any data :)")
+                            Spacer()
                         }
+                    }
+                    
+                    List{
                         ForEach(histories) { history in
                             if history.trainingType == selectedTraining {
                                 HistoryCard(history: history)
                             }
                         }
+                        .onDelete(perform: { indexSet in
+                            deleteItem(indexSet)
+                        })
                     }
+                    .listStyle(.inset)
                 }
                 .padding(.all)
                 
@@ -118,12 +126,20 @@ struct HistoryView: View {
             .toolbar{
                 ToolbarItem(placement: .navigationBarLeading) {
                     Text("History")
-                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                        .font(.title)
+                        .fontWeight(.bold)
+                    EditButton()
                 }
             }
             
         })
+    }
+    
+    func deleteItem(_ indexSet: IndexSet) {
+        for index in indexSet {
+            let history = histories[index]
+            modelContext.delete(history)
+        }
     }
 }
 
