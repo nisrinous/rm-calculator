@@ -110,7 +110,7 @@ struct ChartOneRM: View {
                         .padding(.trailing, 10)
                         .padding(.vertical, 7)
                         .frame(width: 90, height: 1, alignment: .leading)
-                        .onChange(of: viewModel.weight) { newValue in
+                        .onChange(of: viewModel.weight) {
                             viewModel.calculateOneRepMax()
                             updateMacros()
                         }
@@ -127,7 +127,7 @@ struct ChartOneRM: View {
                         .padding(.trailing, 10)
                         .padding(.vertical, 7)
                         .frame(width: 90, height: 1, alignment: .leading)
-                        .onChange(of: viewModel.repetitions) { newValue in
+                        .onChange(of: viewModel.repetitions) {
                             viewModel.calculateOneRepMax()
                             updateMacros()
                         }

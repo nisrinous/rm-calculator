@@ -51,13 +51,13 @@ struct HistoryView: View {
                         ForEach(histories){ history in
                             if history.trainingType == selectedTraining {
                                 AreaMark(
-                                    x: .value("Date", history.date),
+                                    x: .value("Date", history.date, unit: .day),
                                     y: .value("1RM", history.oneRepMax)
                                 )
                                 .interpolationMethod(.catmullRom)
                                 .foregroundStyle(curGradient)
                                 LineMark(
-                                    x: .value("Date", history.date),
+                                    x: .value("Date", history.date, unit: .day),
                                     y: .value("1RM", history.oneRepMax)
                                 )
                                 .foregroundStyle(.primaryOrange)
@@ -80,6 +80,7 @@ struct HistoryView: View {
                     .padding(.bottom)
                     Text("1RM History")
                         .font(.title2)
+                        .bold()
                     Divider()
                     
                     ScrollView{
