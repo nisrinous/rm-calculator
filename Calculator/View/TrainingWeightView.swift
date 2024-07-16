@@ -29,7 +29,7 @@ struct TrainingWeightView: View {
                     Spacer()
                 }
                 .padding(.leading, 5)
-                Text("input_your_one_rm")
+                Text("Input Your 1RM")
                     .fontWeight(.semibold)
                     .font(.system(size: 15))
                     .foregroundColor(.primaryOrange)
