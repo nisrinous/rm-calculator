@@ -35,7 +35,6 @@ struct OneRepMaxView: View {
                         
                 
                 }
-                .padding(.horizontal, 5)
                 
                 ChartOneRM(viewModel: viewModel, calculatorViewModel: calculatorViewModel, activeInputIndex: $activeInputIndex)
                 
@@ -62,9 +61,7 @@ struct OneRepMaxView: View {
                         .fontWeight(.bold)
                 }
             }
-            .onAppear {
-                print("Current weight: \(viewModel.weight)")
-            }
+            .padding(.all, 0)
         }
     }
 }

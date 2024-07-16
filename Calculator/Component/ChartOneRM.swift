@@ -61,7 +61,7 @@ struct ChartOneRM: View {
                             .bold()
                             .opacity(0.7)
                     } else {
-                        Text("0.0") // Default display when oneRepMax is nil
+                        Text("0,0") // Default display when oneRepMax is nil
                             .foregroundColor(Color(red: 0.11, green: 0.11, blue: 0.12))
                             .font(.system(size: 48))
                             .bold()
@@ -147,14 +147,22 @@ struct ChartOneRM: View {
             updateMacros()
         }
         .onChange(of: calculatorViewModel.displays[0]) {
-            if let weight = Double(calculatorViewModel.displays[0]) {
+            if calculatorViewModel.displays[0].isEmpty {
+                viewModel.weight = ""
+                viewModel.calculateOneRepMax()
+                updateMacros()
+            } else if let weight = Double(calculatorViewModel.displays[0]) {
                 viewModel.weight = String(weight)
                 viewModel.calculateOneRepMax()
                 updateMacros()
             }
         }
         .onChange(of: calculatorViewModel.displays[1]) {
-            if let repetitions = Int(calculatorViewModel.displays[1]) {
+            if calculatorViewModel.displays[1].isEmpty {
+                viewModel.repetitions = ""
+                viewModel.calculateOneRepMax()
+                updateMacros()
+            } else if let repetitions = Int(calculatorViewModel.displays[1]) {
                 viewModel.repetitions = String(repetitions)
                 viewModel.calculateOneRepMax()
                 updateMacros()

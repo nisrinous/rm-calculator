@@ -22,7 +22,7 @@ struct WarmUpSheet: View {
                     
                     Spacer()
                 }
-                .padding()
+                .padding([.horizontal, .top])
                 Divider()
                 VStack(alignment: .leading) {
                     Text("Don’t rush and build slowly. We recommend having a coach or spotter on hand to keep you safe and accountable.")
