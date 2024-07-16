@@ -11,6 +11,7 @@ struct TrainingWeightView: View {
     var body: some View {
         NavigationView {
             VStack {
+                Divider()
                 HStack {
                     Picker("Training", selection: $selectedTraining) {
                         ForEach(trainings, id: \.self) { training in
