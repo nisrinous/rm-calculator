@@ -36,7 +36,7 @@ class CalculatorViewModel: ObservableObject {
     }
     
     private func delete(expression: String) -> String {
-        return expression.isEmpty ? "0" : String(expression.dropLast())
+        return expression.isEmpty ? "" : String(expression.dropLast())
     }
 }
 
