@@ -57,7 +57,7 @@
 		E09F7ECD2C3D9629008707BD /* CalculatorButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButtonsView.swift; sourceTree = "<group>"; };
 		E09F7F1D2C43C957008707BD /* TabNavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabNavigationView.swift; sourceTree = "<group>"; };
 		E09F7F272C43CBF2008707BD /* HistoryCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryCard.swift; path = Calculator/Component/HistoryCard.swift; sourceTree = SOURCE_ROOT; };
-		E09F7F292C44EF3A008707BD /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Calculator.app; path = "/Users/nurnisrina/Documents/projects/rm-calculator/build/Debug-iphoneos/Calculator.app"; sourceTree = "<absolute>"; };
+		E09F7F2D2C465137008707BD /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Calculator.app; path = "/Users/nurnisrina/Documents/projects/rm-calculator/build/Debug-iphoneos/Calculator.app"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,7 +165,7 @@
 			);
 			name = Calculator;
 			productName = Calculator;
-			productReference = E09F7F292C44EF3A008707BD /* Calculator.app */;
+			productReference = E09F7F2D2C465137008707BD /* Calculator.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
