@@ -14,6 +14,8 @@ struct OneRepMaxView: View {
     @Environment(\.modelContext) var modelContext
     @State var selectedTraining = trainings[0]
     @State var activeInputIndex = 0
+    
+    @State private var isPresentingAlert = false
 
     
     var body: some View {
@@ -44,14 +46,21 @@ struct OneRepMaxView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {
                         viewModel.saveCalculation(modelContext: modelContext, trainingType: selectedTraining)
+                        isPresentingAlert = true
                     }, label: {
                         Text("Save")
                     })
+                    .disabled(
+                        viewModel.weight.isEmpty || viewModel.repetitions.isEmpty
+                    )
+                    .alert("Saved!", isPresented: $isPresentingAlert) {
+                        Button ("Got it!", role: .cancel) { }
+                    }
                 }
                 ToolbarItem(placement: .navigationBarLeading) {
                     Text("1RM Calculator")
-                        .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                        .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                        .font(.title)
+                        .fontWeight(.bold)
                 }
             }
             .onAppear {

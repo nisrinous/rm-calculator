@@ -14,12 +14,6 @@ struct HistoryCard: View {
     var body: some View {
         VStack{
             HStack{
-                Spacer()
-                Text(formatDate(date: history.date))
-                    .font(.system(size: 10))
-            }
-            .padding([.trailing, .top])
-            HStack{
                 informationMaker(title: "Weight", data: String(history.weight), matrix: "kg")
                 Spacer()
                 dividerMaker()
@@ -29,8 +23,13 @@ struct HistoryCard: View {
                 dividerMaker()
                 Spacer()
                 informationMaker(title: "1RM", data: String(format: "%.1f", history.oneRepMax), matrix: "kg")
+//                    .padding(.trailing, 20)
+                Spacer()
+                Text(formatDate(date: history.date))
+                    .font(.system(size: 14))
+                    .foregroundStyle(.gray)
             }
-            .padding([.bottom, .horizontal])
+            .padding([.all])
         }
         .background(
             .secondaryGrey
@@ -46,29 +45,33 @@ func informationMaker(title: String, data: String, matrix: String) -> some View 
     
     VStack{
         Text(title)
+            .font(.system(size: 14))
+            .foregroundStyle(.historyInfo)
             .bold()
         HStack(alignment: .bottom){
             Text(data)
                 .foregroundStyle(.primaryOrange)
-                .font(.system(size: 30))
-                .frame(height: 25)
-            Text(matrix)
+                .font(.system(size: 18))
                 .bold()
+            Text(matrix)
+                .padding(.horizontal, -5)
+                .font(.system(size: 14))
+                .foregroundStyle(.gray)
         }
+        .frame(maxWidth: 100, idealHeight: 20)
     }
 }
 
 func dividerMaker() -> some View {
     Divider()
         .frame(height: 50)
-        .overlay(Color.white)
+//        .overlay(Color.white)
 }
 
 func formatDate(date: Date) -> String{
     let dateFormatter = DateFormatter()
     
-    dateFormatter.dateStyle = .short
-    
+    dateFormatter.dateFormat = "dd MMM"
     return dateFormatter.string(from: date)
 }
 
