@@ -18,7 +18,7 @@ struct WarmUpSheet: View {
                     Text("Warm-Up Suggestion")
                         .font(.system(size: 17))
                         .fontWeight(.semibold)
-                        .foregroundColor(.black)
+                        .foregroundColor(.tulisanHitamPutih)
                     
                     Spacer()
                 }
@@ -26,10 +26,12 @@ struct WarmUpSheet: View {
                 Divider()
                 VStack(alignment: .leading) {
                     Text("\(Text("Don't rush" ).foregroundStyle(.red).bold()) and build slowly. We recommend having a coach or spotter on hand to keep you safe and accountable.")
+                        .foregroundColor(.tulisanHitamPutih)
                         .font(.subheadline)
                         .padding(.horizontal)
                         .padding(.top, 2)
                     Text("Perform sets as follow:")
+                        .foregroundColor(.tulisanHitamPutih)
                         .font(.subheadline)
                         .padding(.horizontal)
                         .padding(.vertical, 5)
@@ -37,11 +39,17 @@ struct WarmUpSheet: View {
                                 
                 if let oneRepMax = viewModel2.oneRepMax {
                     WarmUpCard(number: 1, reps: "10-12", weight: "x \(viewModel.calculateWeightSuggestions(oneRepMax: oneRepMax, percentage: 30.0)) kg")
+                        .background(.cardWarmUp)
                     WarmUpCard(number: 2, reps: "8-10", weight: "x \(viewModel.calculateWeightSuggestions(oneRepMax: oneRepMax, percentage: 40.0)) kg")
+                        .background(.cardWarmUp)
                     WarmUpCard(number: 3, reps: "6-8", weight: "x \(viewModel.calculateWeightSuggestions(oneRepMax: oneRepMax, percentage: 50.0)) kg")
+                        .background(.cardWarmUp)
                     WarmUpCard(number: 4, reps: "4-6", weight: "x \(viewModel.calculateWeightSuggestions(oneRepMax: oneRepMax, percentage: 60.0)) kg")
+                        .background(.cardWarmUp)
                     WarmUpCard(number: 5, reps: "2-4", weight: "x \(viewModel.calculateWeightSuggestions(oneRepMax: oneRepMax, percentage: 70.0)) kg")
+                        .background(.cardWarmUp)
                     WarmUpCard(number: 6, reps: "1-2", weight: "x \(viewModel.calculateWeightSuggestions(oneRepMax: oneRepMax, percentage: 80.0)) kg")
+                        .background(.cardWarmUp)
                 } else {
                     Text("No data")
                         .foregroundColor(.gray)

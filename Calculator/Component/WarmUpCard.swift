@@ -29,17 +29,17 @@ struct WarmUpCard: View {
                     Text("\(number)")
                         .font(.system(size: 32))
                         .multilineTextAlignment(.center)
-                        .foregroundColor(.white)
+                        .foregroundColor(.tulisanPutihHitam)
                         .fontWeight(.bold)
                 }
 
                 VStack(alignment: .leading) {
                     Text("Repetition")
-                        .foregroundColor(.black)
+                        .foregroundColor(.tulisanHitamPutih)
                         .fontWeight(.semibold)
 
                     Text(reps)
-                        .foregroundColor(.black)
+                        .foregroundColor(.tulisanHitamPutih)
                 }
                 .padding(.leading, 10)
 
@@ -50,9 +50,12 @@ struct WarmUpCard: View {
                     .fontWeight(.semibold)
                     .frame(width: 85, alignment: .center)
             }
+            
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.horizontal, 30)
+            
         }
+        
     }
 }
 

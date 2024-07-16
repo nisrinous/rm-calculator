@@ -96,11 +96,16 @@ struct TrainingWeightView: View {
                 }
             }
         }
+        .background(.primaryWhite)
     }
 }
 
 #Preview {
     TrainingWeightView()
+        .environment(\.locale,
+                      Locale.init(identifier: "id")
+        )
+        .preferredColorScheme(.dark)
 }
 
 struct TrainingWeightResult: View {

@@ -56,20 +56,20 @@ struct ChartOneRM: View {
                 VStack {
                     if let oneRepMax = viewModel.oneRepMax {
                         Text("\(oneRepMax, specifier: "%.1f")")
-                            .foregroundColor(Color(red: 0.11, green: 0.11, blue: 0.12))
+                            .foregroundColor(.nol)
                             .font(.system(size: 48))
                             .bold()
                             .opacity(0.7)
                     } else {
                         Text("0,0") // Default display when oneRepMax is nil
-                            .foregroundColor(Color(red: 0.11, green: 0.11, blue: 0.12))
+                            .foregroundColor(.nol)
                             .font(.system(size: 48))
                             .bold()
                             .opacity(0.7)
                     }
                     
                     Text("kg")
-                        .foregroundColor(.black)
+                        .foregroundColor(.nol)
                         .font(.system(size: 16))
                         .opacity(0.7)
                         .bold()
@@ -93,7 +93,7 @@ struct ChartOneRM: View {
 
                     
                     Text("kg")
-                        .foregroundColor(Color(red: 0.24, green: 0.24, blue: 0.26).opacity(0.3))
+                        .foregroundColor(.kgHome)
                         .font(.system(size: 17))
                         .fontWeight(.semibold)
                 }
@@ -111,7 +111,7 @@ struct ChartOneRM: View {
 
                     
                     Text("reps")
-                        .foregroundColor(Color(red: 0.24, green: 0.24, blue: 0.26).opacity(0.3))
+                        .foregroundColor(.kgHome)
                         .font(.system(size: 17))
                         .fontWeight(.semibold)
                 }

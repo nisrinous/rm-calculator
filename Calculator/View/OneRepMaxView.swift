@@ -19,7 +19,6 @@ struct OneRepMaxView: View {
     
     var body: some View {
         NavigationView {
-            
             VStack {
                 Divider()
 
@@ -47,6 +46,7 @@ struct OneRepMaxView: View {
                         isPresentingAlert = true
                     }, label: {
                         Text("Save")
+                            .foregroundStyle(.secondary)
                     })
                     .disabled(
                         viewModel.isSaveButtonDisabled()
@@ -63,10 +63,15 @@ struct OneRepMaxView: View {
             }
             .padding(.all, 0)
         }
+        .background(.primaryWhite)
     }
 }
 
 
 #Preview {
     OneRepMaxView()
+        .environment(\.locale,
+                      Locale.init(identifier: "id")
+        )
+        .preferredColorScheme(.dark)
 }

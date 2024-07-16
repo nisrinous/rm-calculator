@@ -132,7 +132,9 @@ struct HistoryView: View {
                 }
             }
             
-        })
+        }
+        )
+        .background(.primaryWhite)
     }
     
     func deleteItem(_ indexSet: IndexSet) {
@@ -145,4 +147,8 @@ struct HistoryView: View {
 
 #Preview {
     HistoryView()
+        .environment(\.locale,
+                      Locale.init(identifier: "id")
+        )
+        .preferredColorScheme(.dark)
 }

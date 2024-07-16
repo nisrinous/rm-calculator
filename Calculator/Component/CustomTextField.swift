@@ -42,7 +42,7 @@ struct CustomTextField: UIViewRepresentable {
 
         // Apply the same styles as the TextField in the HStack
         textField.keyboardType = .numberPad
-        textField.backgroundColor = UIColor(red: 0.46, green: 0.46, blue: 0.5, alpha: 0.12)
+        textField.backgroundColor = .numberPadCustom
         textField.layer.cornerRadius = 10
         textField.setLeftPaddingPoints(10) // Custom padding extension
         textField.setRightPaddingPoints(10) // Custom padding extension
