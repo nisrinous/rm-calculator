@@ -47,6 +47,18 @@ struct HistoryView: View {
                 }
                 
                 VStack (alignment: .leading) {
+                    if histories.isEmpty {
+                        VStack{
+                            Spacer()
+                            HStack {
+                                Spacer()
+                                Text("You haven't added any data :)")
+                                Spacer()
+                            }
+                        }
+                        .frame(maxHeight: 50)
+                    }
+                    
                     Chart {
                         ForEach(histories){ history in
                             if history.trainingType == selectedTraining {
@@ -84,6 +96,13 @@ struct HistoryView: View {
                     Divider()
                     
                     ScrollView{
+                        if histories.isEmpty {
+                            HStack(){
+                                Spacer()
+                                Text("You haven't added any data :)")
+                                Spacer()
+                            }
+                        }
                         ForEach(histories) { history in
                             if history.trainingType == selectedTraining {
                                 HistoryCard(history: history)

@@ -50,6 +50,9 @@ struct OneRepMaxView: View {
                     }, label: {
                         Text("Save")
                     })
+                    .disabled(
+                        viewModel.weight.isEmpty || viewModel.repetitions.isEmpty
+                    )
                     .alert("Saved!", isPresented: $isPresentingAlert) {
                         Button ("Got it!", role: .cancel) { }
                     }
