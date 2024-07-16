@@ -43,10 +43,10 @@ struct TrainingWeightView: View {
                     .multilineTextAlignment(.center)
                     .padding()
                     .onTapGesture {
-                        hideKeyboard()
+                        self.hideKeyboard()
                     }
                     .onChange(of: calculatorViewModel.displays[0]) {
-                        hideKeyboard()
+                        self.hideKeyboard()
                     }
                 
                 Text("kg")
@@ -58,7 +58,7 @@ struct TrainingWeightView: View {
                 
                 Button(action: {
                     if !calculatorViewModel.displays[0].isEmpty {
-                        hideKeyboard()
+                        self.hideKeyboard()
                         viewModel.oneRepMax = calculatorViewModel.displays[0]
                         viewModel.calculateTrainingWeights()
                         isPresented.toggle()
@@ -72,7 +72,6 @@ struct TrainingWeightView: View {
                         .background(calculatorViewModel.displays[0].isEmpty ? Color.secondary : Color.primaryOrange)
                         .cornerRadius(12)
                 }
-                .padding()
 
                 CalculatorButtonsView(calculatorViewModel: calculatorViewModel, activeInputIndex: $activeInputIndex)
                 
@@ -85,11 +84,11 @@ struct TrainingWeightView: View {
                     .presentationDetents([.fraction(0.5), .medium, .large])
             }
             .toolbar {
-                ToolbarItem(placement: .navigationBarLeading, content: {
+                ToolbarItem(placement: .navigationBarLeading) {
                     Text("Rep Max")
                         .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                         .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                })
+                }
             }
         }
     }
@@ -149,9 +148,10 @@ struct TrainingWeightResult: View {
                             .fontWeight(.medium)
                         VStack {
                             SubList(viewModel: viewModel, indices: [5,4])
-                        }.padding()
-                            .background(.greyTable)
-                            .cornerRadius(15)
+                        }
+                        .padding()
+                        .background(.greyTable)
+                        .cornerRadius(15)
                     }
                     VStack(alignment:.leading){
                         Text("Explosive Power")

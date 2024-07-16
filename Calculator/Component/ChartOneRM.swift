@@ -61,7 +61,7 @@ struct ChartOneRM: View {
                             .bold()
                             .opacity(0.7)
                     } else {
-                        Text("0.0") // Default display when oneRepMax is nil
+                        Text("0,0") // Default display when oneRepMax is nil
                             .foregroundColor(Color(red: 0.11, green: 0.11, blue: 0.12))
                             .font(.system(size: 48))
                             .bold()

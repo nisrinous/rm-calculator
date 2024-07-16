@@ -24,7 +24,7 @@ class TrainingWeightViewModel: ObservableObject {
     }
 
     func saveCalculation() {
-        guard let oneRepMax = Double(oneRepMax), !trainingWeights.isEmpty else {
+        guard let _ = Double(oneRepMax), !trainingWeights.isEmpty else {
             return
         }
 
