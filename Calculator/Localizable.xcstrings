@@ -102,6 +102,7 @@
       }
     },
     "0" : {
+      "extractionState" : "stale",
       "localizations" : {
         "id" : {
           "stringUnit" : {

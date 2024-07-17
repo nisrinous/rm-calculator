@@ -13,6 +13,8 @@ struct TrainingWeightView: View {
     }
 
     var body: some View {
+        @State var activeInput = calculatorViewModel.displays[0]
+
         NavigationView {
             VStack {
                 Divider()
@@ -36,19 +38,13 @@ struct TrainingWeightView: View {
                     .foregroundColor(.primaryOrange)
                     .padding(.bottom, 80)
 
-                TextField("0", text: $calculatorViewModel.displays[0])
-                    .frame(width: 200)
-                    .foregroundColor(.primaryOrange)
+                Text("\(activeInput == "" ? String(0) : activeInput)")
+                    .frame(width: 200, height: 70)
+                    .foregroundColor(activeInput == "" ? .black : .primaryOrange)
                     .fontWeight(.bold)
                     .font(.system(size: 60))
                     .multilineTextAlignment(.center)
                     .padding()
-                    .onTapGesture {
-                        self.hideKeyboard()
-                    }
-                    .onChange(of: calculatorViewModel.displays[0]) {
-                        self.hideKeyboard()
-                    }
                     .bold()
                 
                 Text("kg")
@@ -60,9 +56,8 @@ struct TrainingWeightView: View {
                     .opacity(0.7)
                 
                 Button(action: {
-                    if !calculatorViewModel.displays[0].isEmpty {
-                        self.hideKeyboard()
-                        viewModel.oneRepMax = calculatorViewModel.displays[0]
+                    if !activeInput.isEmpty {
+                        viewModel.oneRepMax = activeInput
                         viewModel.calculateTrainingWeights()
                         isPresented.toggle()
                     }
@@ -72,11 +67,11 @@ struct TrainingWeightView: View {
                         .font(.system(size: 17))
                         .fontWeight(.bold)
                         .padding()
-                        .background(calculatorViewModel.displays[0].isEmpty ? Color.secondary : Color.primaryOrange)
+                        .background(activeInput.isEmpty ? Color.secondary : Color.primaryOrange)
                         .cornerRadius(12)
                 }
                 .padding(.top, 30)
-                .disabled(calculatorViewModel.displays[0].isEmpty)
+                .disabled(activeInput.isEmpty)
 
                 Spacer()
                 CalculatorButtonsView(calculatorViewModel: calculatorViewModel, activeInputIndex: $activeInputIndex)
