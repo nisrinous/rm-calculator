@@ -221,7 +221,7 @@ struct SubList: View {
                     Image(systemName: "flame")
                         .resizable()
                         .foregroundColor(.primaryOrange)
-                        .frame(width: 15, height: 15)
+                        .frame(width: 15, height: 20)
                     Text("\(viewModel.repetition[index], specifier: "%.0f") Rep")
                         .foregroundColor(.tulisanHitamPutih)
                 }
