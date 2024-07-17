@@ -20,21 +20,21 @@ struct CalculatorButton: View {
                     .font(.title)
                     .frame(width: 100, height: 50)
                     .foregroundColor(.primary)
-                    .background(.keyboard)
+                    .background(Color.secondary.opacity(0.1))
                     .cornerRadius(12)
             } else if title == "," {
                 Text(",")
                     .font(.title)
                     .frame(width: 100, height: 50)
                     .foregroundColor(.primary)
-                    .background(.keyboard)
+                    .background(Color.secondary.opacity(0.1))
                     .cornerRadius(12)
             } else {
                 Text("\(title)")
                     .font(.title)
                     .frame(width: 100, height: 50)
                     .foregroundColor(.primary)
-                    .background(.keyboard)
+                    .background(Color.secondary.opacity(0.1))
                     .cornerRadius(12)
             }
         }

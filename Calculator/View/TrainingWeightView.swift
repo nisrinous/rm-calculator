@@ -40,7 +40,7 @@ struct TrainingWeightView: View {
                     .frame(width: 200)
                     .foregroundColor(.primaryOrange)
                     .fontWeight(.bold)
-                    .font(.system(size: 52))
+                    .font(.system(size: 60))
                     .multilineTextAlignment(.center)
                     .padding()
                     .onTapGesture {
@@ -53,9 +53,9 @@ struct TrainingWeightView: View {
                 
                 Text("kg")
                     .fontWeight(.bold)
-                    .font(.system(size: 16))
+                    .font(.system(size: 20))
                     .foregroundColor(.black)
-                    .padding(.bottom, 80)
+                    .padding(.bottom, 72)
                     .padding(.top, -20)
                     .opacity(0.7)
                 

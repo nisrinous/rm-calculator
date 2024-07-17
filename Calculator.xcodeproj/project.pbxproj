@@ -36,7 +36,7 @@
 		115681562C41446E00DECFF2 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		115681692C45119100DECFF2 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		1156816E2C45336200DECFF2 /* WarmUpSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarmUpSheetViewModel.swift; sourceTree = "<group>"; };
-		2E400D2A2C46B99C00E09DC0 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E400D2A2C46B99C00E09DC0 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Calculator.app; path = "/Users/nurnisrina/Documents/projects/rm-calculator/build/Debug-iphoneos/Calculator.app"; sourceTree = "<absolute>"; };
 		2E400D2B2C46B9C500E09DC0 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		4D628D522C44E24A004A9635 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		4DAA72E02C4427DE0003223C /* ChartOneRM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartOneRM.swift; sourceTree = "<group>"; };
@@ -74,7 +74,6 @@
 			isa = PBXGroup;
 			children = (
 				E09F7EAE2C3CE49B008707BD /* Calculator */,
-				2E400D2A2C46B99C00E09DC0 /* Calculator.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -375,7 +374,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Calculator/Preview Content\"";
-				DEVELOPMENT_TEAM = C59QF2W8P6;
+				DEVELOPMENT_TEAM = 8FPJ93WVDR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Saturm;
@@ -406,7 +405,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Calculator/Preview Content\"";
-				DEVELOPMENT_TEAM = C59QF2W8P6;
+				DEVELOPMENT_TEAM = 8FPJ93WVDR;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Saturm;

@@ -54,7 +54,7 @@ struct WarmUpCard: View {
             }
             
             .padding(.vertical, 10)
-            .background(.cardWarmUp)
+            .background(.secondaryGrey)
             .cornerRadius(50)
             .padding(.horizontal, 20)
             
