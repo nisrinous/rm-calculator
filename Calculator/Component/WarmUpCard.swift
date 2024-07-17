@@ -17,7 +17,7 @@ struct WarmUpCard: View {
             Rectangle()
                 .foregroundColor(.clear)
                 .frame(width: 361, height: 73)
-                .background(Color.white)
+                .background(.sheetPage2)
                 .cornerRadius(50)
 
             HStack {
@@ -54,7 +54,6 @@ struct WarmUpCard: View {
             }
             
             .padding(.vertical, 10)
-            .background(.secondaryGrey)
             .cornerRadius(50)
             .padding(.horizontal, 20)
             
