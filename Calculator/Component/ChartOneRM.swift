@@ -56,7 +56,7 @@ struct ChartOneRM: View {
                 VStack {
                     if let oneRepMax = viewModel.oneRepMax {
                         Text("\(oneRepMax, specifier: "%.1f")")
-                            .foregroundColor(.nol)
+                            .foregroundColor(oneRepMax == 0.0 ? .black : .primaryOrange)
                             .font(.system(size: 48))
                             .bold()
                             .opacity(0.7)
