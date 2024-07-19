@@ -36,7 +36,6 @@
 		115681562C41446E00DECFF2 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		115681692C45119100DECFF2 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		1156816E2C45336200DECFF2 /* WarmUpSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarmUpSheetViewModel.swift; sourceTree = "<group>"; };
-		2E400D2A2C46B99C00E09DC0 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Calculator.app; path = "/Users/nurnisrina/Documents/projects/rm-calculator/build/Debug-iphoneos/Calculator.app"; sourceTree = "<absolute>"; };
 		2E400D2B2C46B9C500E09DC0 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		4D628D522C44E24A004A9635 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		4DAA72E02C4427DE0003223C /* ChartOneRM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartOneRM.swift; sourceTree = "<group>"; };
@@ -57,6 +56,7 @@
 		E09F7ECD2C3D9629008707BD /* CalculatorButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButtonsView.swift; sourceTree = "<group>"; };
 		E09F7F1D2C43C957008707BD /* TabNavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabNavigationView.swift; sourceTree = "<group>"; };
 		E09F7F272C43CBF2008707BD /* HistoryCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryCard.swift; path = Calculator/Component/HistoryCard.swift; sourceTree = SOURCE_ROOT; };
+		E09F7F4B2C4A3FFB008707BD /* Saturm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = Saturm.app; path = "/Users/nurnisrina/Documents/projects/rm-calculator/build/Debug-iphoneos/Saturm.app"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,9 +150,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E09F7EAB2C3CE49B008707BD /* Calculator */ = {
+		E09F7EAB2C3CE49B008707BD /* Saturm */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E09F7EBC2C3CE49D008707BD /* Build configuration list for PBXNativeTarget "Calculator" */;
+			buildConfigurationList = E09F7EBC2C3CE49D008707BD /* Build configuration list for PBXNativeTarget "Saturm" */;
 			buildPhases = (
 				E09F7EA82C3CE49B008707BD /* Sources */,
 				E09F7EA92C3CE49B008707BD /* Frameworks */,
@@ -162,9 +162,9 @@
 			);
 			dependencies = (
 			);
-			name = Calculator;
+			name = Saturm;
 			productName = Calculator;
-			productReference = 2E400D2A2C46B99C00E09DC0 /* Calculator.app */;
+			productReference = E09F7F4B2C4A3FFB008707BD /* Saturm.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -182,7 +182,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E09F7EA72C3CE49B008707BD /* Build configuration list for PBXProject "Calculator" */;
+			buildConfigurationList = E09F7EA72C3CE49B008707BD /* Build configuration list for PBXProject "Saturm" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -196,7 +196,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E09F7EAB2C3CE49B008707BD /* Calculator */,
+				E09F7EAB2C3CE49B008707BD /* Saturm */,
 			);
 		};
 /* End PBXProject section */
@@ -374,7 +374,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Calculator/Preview Content\"";
-				DEVELOPMENT_TEAM = 8FPJ93WVDR;
+				DEVELOPMENT_TEAM = Q8DUNNM6FS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Saturm;
@@ -389,7 +389,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = nizoe.Calculator;
+				PRODUCT_BUNDLE_IDENTIFIER = orangefor.saturm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -405,7 +405,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Calculator/Preview Content\"";
-				DEVELOPMENT_TEAM = 8FPJ93WVDR;
+				DEVELOPMENT_TEAM = Q8DUNNM6FS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Saturm;
@@ -420,7 +420,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = nizoe.Calculator;
+				PRODUCT_BUNDLE_IDENTIFIER = orangefor.saturm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -431,7 +431,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E09F7EA72C3CE49B008707BD /* Build configuration list for PBXProject "Calculator" */ = {
+		E09F7EA72C3CE49B008707BD /* Build configuration list for PBXProject "Saturm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E09F7EBA2C3CE49D008707BD /* Debug */,
@@ -440,7 +440,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E09F7EBC2C3CE49D008707BD /* Build configuration list for PBXNativeTarget "Calculator" */ = {
+		E09F7EBC2C3CE49D008707BD /* Build configuration list for PBXNativeTarget "Saturm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E09F7EBD2C3CE49D008707BD /* Debug */,
